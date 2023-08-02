@@ -109,9 +109,9 @@
 				<Name>DualDrive (EtherCAT)</Name>
 				<AddressInfo>
 					<Pnp>
-						<DeviceDesc>EtherCAT (TwinCAT-Intel PCI Ethernet Adapter (Gigab</DeviceDesc>
-						<DeviceName>\DEVICE\{EE9F42D7-C1D5-4430-A0FE-C09E45E17188}</DeviceName>
-						<DeviceData>7ccbe2e63fe5</DeviceData>
+						<DeviceDesc>Ethernet 2 (TwinCAT-Intel PCI Ethernet Adapter (Gig</DeviceDesc>
+						<DeviceName>\DEVICE\{280D1197-540F-461D-8256-FF039E47C159}</DeviceName>
+						<DeviceData>7ccbe2e63fe4</DeviceData>
 					</Pnp>
 				</AddressInfo>
 				<Image Id="1" AddrType="9" ImageType="3">

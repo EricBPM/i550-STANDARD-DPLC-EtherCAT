@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Drive_Communication" Id="{f11b8a3c-ca1f-4ae0-8a80-7f86046c4783}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Drive_Communication
+VAR
+	Rotor_Active_Torque AT %I*: INT;	//Rotor Torque as percentage of Rated Motor Torque
+	Rotor_Active_Torque_REAL : REAL;
+	Rotor_Displayed_Torque :REAL;
+
+	//Feedroll Drive
+	Feedroll_Drive_Message AT %I* : USINT;		//Drive Faults
+	Feedroll_Drive_Status AT %I* : UINT;
+	Feedroll_Drive_Running AT %I* : BOOL;
+
+	
+	
+	//Rotor Drive
+	Rotor_Drive_Message AT %I* : USINT;		//Drive Faults
+	Rotor_Drive_Status AT %I* : UINT;
+	Rotor_Drive_Running AT %I* : BOOL;
+
+
+	
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+/////////////////////////Rotor Torque Display Scaling
+IF Rotor_Active_Torque < 0 THEN
+	Rotor_Active_Torque := Rotor_Active_Torque * -1;
+END_IF
+Rotor_Active_Torque_REAL := INT_TO_REAL(Rotor_Active_Torque);
+Rotor_Displayed_Torque := Rotor_Active_Torque_REAL / 10;
+
+
+
+////////////////////////////////////Combined Running Status
+IF Feedroll_Drive_Running AND Rotor_Drive_Running THEN
+	GVL.Pelletizer_Running := TRUE;
+ELSE
+	GVL.Pelletizer_Running := FALSE;
+END_IF
+]]></ST>
+    </Implementation>
+    <LineIds Name="Drive_Communication">
+      <LineId Id="39" Count="1" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="25" Count="1" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="29" Count="3" />
+      <LineId Id="41" Count="4" />
+      <LineId Id="51" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

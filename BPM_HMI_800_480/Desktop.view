@@ -1,0 +1,239 @@
+<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-unit="px" data-tchmi-width="800" data-tchmi-height-unit="px" data-tchmi-height="480" data-tchmi-background-image-width-unit="%" data-tchmi-background-image-height-unit="%" data-tchmi-background-image-width="100" data-tchmi-background-image-height="100" data-tchmi-creator-viewport-width="800" data-tchmi-creator-viewport-height="480">
+  
+<div id="Header_Top" data-tchmi-type="TcHmi.Controls.BaseTemplate.TcHmiHeader" data-tchmi-height="80" data-tchmi-left="0" data-tchmi-top="0" data-tchmi-right="0">
+
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">[
+"divider",
+"divider-top"
+]
+</script><script data-tchmi-target-attribute="data-tchmi-header-items" type="application/json">
+[
+  {
+    "itemType": "Image",
+    "priority": "1",
+    "itemAlign": "Left",
+    "prefWidth": 160.0,
+    "prefWidthUnit": "px",
+    "prefHeight": 60.0,
+    "prefHeightUnit": "px",
+    "minWidth": 160.0,
+    "minWidthUnit": "px",
+    "classList": [],
+    "accessRights": [],
+    "image": "Images/398x150 Logo (300DPI) - no background.png",
+    "altText": "BPM",
+    "targetRegion": "%ctrl%Region_Center%/ctrl%",
+    "targetContent": "Pages/Home.content"
+  },
+  {
+    "itemType": "AdsState",
+    "priority": "3",
+    "itemAlign": "Right",
+    "prefWidth": 160.0,
+    "prefWidthUnit": "px",
+    "prefHeight": 48.0,
+    "prefHeightUnit": "px",
+    "minWidth": 48.0,
+    "minWidthUnit": "px",
+    "classList": [],
+    "accessRights": [],
+    "adsRuntime": "TcSysService",
+    "iconWidth": 48.0,
+    "iconWidthUnit": "px",
+    "text": "TwinCAT",
+    "textPosition": "Left",
+    "serverInterval": 1000.0,
+    "serverDomain": "ADS",
+    "stateImages": {
+      "Fallback": "Images/TwinCAT/twincat-fallback.svg",
+      "Run": "Images/TwinCAT/twincat-run.svg",
+      "Stop": "Images/TwinCAT/twincat-stop.svg",
+      "Config": "Images/TwinCAT/twincat-config.svg",
+      "Exception": "Images/TwinCAT/twincat-exeption.svg"
+    }
+  },
+  {
+    "itemType": "AdsState",
+    "priority": "3",
+    "itemAlign": "Right",
+    "prefWidth": 160.0,
+    "prefWidthUnit": "px",
+    "prefHeight": 48.0,
+    "prefHeightUnit": "px",
+    "minWidth": 48.0,
+    "minWidthUnit": "px",
+    "classList": [],
+    "accessRights": [],
+    "adsRuntime": "PLC1",
+    "iconWidth": 48.0,
+    "iconWidthUnit": "px",
+    "text": "PLC",
+    "textPosition": "Left",
+    "serverInterval": 1000.0,
+    "serverDomain": "ADS",
+    "stateImages": {
+      "Fallback": "Images/PLC/plc-fallback.svg",
+      "Run": "Images/PLC/plc-run.svg",
+      "Stop": "Images/PLC/plc-stop.svg",
+      "Config": "Images/PLC/plc-config.svg",
+      "Exception": "Images/PLC/plc-exeption.svg"
+    }
+  },
+  {
+    "itemType": "UserManagement",
+    "priority": "3",
+    "itemAlign": "Right",
+    "prefWidth": 150.0,
+    "prefWidthUnit": "%",
+    "prefHeight": 48.0,
+    "prefHeightUnit": "px",
+    "minWidth": 48.0,
+    "minWidthUnit": "px",
+    "classList": [],
+    "accessRights": [],
+    "allowLogout": true,
+    "allowSwitchUser": true
+  },
+  {
+    "itemType": "EventLine",
+    "priority": "5",
+    "itemAlign": "Right",
+    "prefWidth": 500.0,
+    "prefWidthUnit": "px",
+    "prefHeight": 48.0,
+    "prefHeightUnit": "px",
+    "minWidth": 100.0,
+    "minWidthUnit": "px",
+    "classList": [],
+    "accessRights": [],
+    "messageFormat": [
+      {
+        "name": "timeRaised"
+      },
+      {
+        "text": " | "
+      },
+      {
+        "name": "domain"
+      },
+      {
+        "text": " | "
+      },
+      {
+        "name": "text"
+      }
+    ],
+    "filter": [
+      {
+        "path": "domain",
+        "comparator": "==",
+        "value": "TcHmiEventLogger"
+      },
+      {
+        "logic": "OR"
+      },
+      {
+        "path": "domain",
+        "comparator": "==",
+        "value": "TcHmiAlarm"
+      }
+    ]
+  },
+  {
+    "itemType": "Time",
+    "priority": "4",
+    "itemAlign": "Right",
+    "prefWidth": 96.0,
+    "prefWidthUnit": "px",
+    "prefHeight": 48.0,
+    "prefHeightUnit": "px",
+    "minWidth": 96.0,
+    "minWidthUnit": "px",
+    "classList": [],
+    "accessRights": [],
+    "timeDisplayLayout": "TimeDateMultiLine"
+  }
+]
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctrl%Header_Top::HeaderItems[3]%/ctrl%",
+    "actions": []
+  }
+]
+</script>
+</div><div id="Navigation_Left" data-tchmi-type="TcHmi.Controls.BaseTemplate.TcHmiNavigation" data-tchmi-width="227" data-tchmi-left="0" data-tchmi-top="%ctrl%Header_Top::Height%/ctrl%" data-tchmi-bottom="0" data-tchmi-target-region="%ctrl%Region_Center%/ctrl%" data-tchmi-navigation-orientation="Vertical" data-tchmi-keep-lowest-level="true" data-tchmi-show-back-button="false" data-tchmi-height="400">
+
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">[
+"divider",
+"divider-left"
+]
+</script><script data-tchmi-target-attribute="data-tchmi-navigation-structure" type="application/json">
+[
+  {
+    "name": "%l%L_Home%/l%",
+    "content": "Pages/Home.content",
+    "icon_a": "%tr%TR_Icon_Home_Active%/tr%",
+    "icon_n": "%tr%TR_Icon_Home_Normal%/tr%",
+    "icon_p": "%tr%TR_Icon_Home_Pressed%/tr%"
+  },
+  {
+    "name": "%l%L_Recipes%/l%",
+    "content": "Pages/Recipes.content",
+    "icon_a": "%tr%TR_Icon_Recipes_active%/tr%",
+    "icon_n": "%tr%TR_Icon_Recipes_normal%/tr%",
+    "icon_p": "%tr%TR_Icon_Recipes_pressed%/tr%"
+  },
+  {
+    "name": "%l%L_MachineSettings%/l%",
+    "content": "Pages/MachineSettings.content",
+    "icon_a": "%tr%TR_Icon_MachineSettings_active%/tr%",
+    "icon_n": "%tr%TR_Icon_MachineSettings_normal%/tr%",
+    "icon_p": "%tr%TR_Icon_MachineSettings_pressed%/tr%"
+  },
+  {
+    "name": "%l%L_Documents%/l%",
+    "content": "Pages/Documents.content",
+    "icon_a": "%tr%TR_Icon_Documents_active%/tr%",
+    "icon_n": "%tr%TR_Icon_Documents_normal%/tr%",
+    "icon_p": "%tr%TR_Icon_Documents_pressed%/tr%"
+  },
+  {
+    "name": "%l%L_EtherCATDiagnostics%/l%",
+    "content": "Pages/EtherCATDiagnostics.content",
+    "icon_a": "%tr%TR_Icon_EtherCATDiagnostics_active%/tr%",
+    "icon_n": "%tr%TR_Icon_EtherCATDiagnostics_normal%/tr%",
+    "icon_p": "%tr%TR_Icon_EtherCATDiagnostics_pressed%/tr%"
+  }
+]
+</script></div><div id="Region_Center" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-left="0" data-tchmi-top="%ctrl%Header_Top::Height%/ctrl%" data-tchmi-scrolling="Yes" data-tchmi-bottom="0" data-tchmi-right="0" data-tchmi-width="800" data-tchmi-height="400">
+
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json"></script></div><script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">[ 
+                {   
+                    "event": "%ctrl%Desktop::RenderedWidth%/ctrl%", 
+                    "actions": [ 
+                        {  
+                            "objectType": "Function",
+                            "active": true,  
+                            "fn":  "TcHmiResponsiveBehaviour", 
+                            "fnParams": [ 
+                                {  
+                                    "objectType": "Symbol",  
+                                    "valueType":  "tchmi:general#/definitions/String",  
+                                    "symbolExpression":  "%i%MediaQueryList%/i%" 
+                                }, 
+                                {  
+                                    "objectType": "Symbol", 
+                                    "valueType": "tchmi:general#/definitions/String", 
+                                    "symbolExpression": "%i%AffectedControls%/i%" 
+                                } 
+                            ], 
+                            "asyncWait": true 
+                        } 
+                    ] 
+                } 
+            ]</script>
+</div>

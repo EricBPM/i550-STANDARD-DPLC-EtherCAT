@@ -1,0 +1,777 @@
+<div id="Home" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="800" data-tchmi-height="400" data-tchmi-width-unit="px" data-tchmi-height-unit="px">
+
+<div id="Feedroll_Speed_Tachometer" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTachometer" data-tchmi-base-animation-time="1000" data-tchmi-height="280" data-tchmi-height-unit="px" data-tchmi-label-range="20" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-show-labels="true" data-tchmi-show-ticks="true" data-tchmi-show-value-text="true" data-tchmi-top="29" data-tchmi-top-unit="px" data-tchmi-width="280" data-tchmi-width-unit="px" data-tchmi-unit="Ft/min" data-tchmi-max-value="%s%PLC1.GVL.Maximum_Line_Speed%/s%" data-tchmi-value="%s%PLC1.GVL.FeedRate_Line_Speed%/s%">
+<script data-tchmi-target-attribute="data-tchmi-range" type="application/json">
+[
+  {
+    "color": {
+      "color": "rgba(255, 0, 0, 1)"
+    },
+    "start": 0.0,
+    "end": "%s%PLC1.GVL.Minimum_Line_Speed%/s%"
+  },
+  {
+    "color": {
+      "color": "rgba(0, 128, 0, 1)"
+    },
+    "start": "%s%PLC1.GVL.Minimum_Line_Speed%/s%",
+    "end": "%s%PLC1.GVL.Maximum_Line_Speed%/s%"
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-value-format" type="application/json">
+{
+  "objectType": "Function",
+  "fn": "GaugeValueFormatter",
+  "fnParams": []
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-tick-definition" type="application/json">
+{
+  "mainTickRange": 20,
+  "subTickRange": 5
+}
+</script>
+
+</div>
+<div id="Rotor_Speed_Tachometer" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTachometer" data-tchmi-base-animation-time="1000" data-tchmi-height="280" data-tchmi-height-unit="px" data-tchmi-label-range="200" data-tchmi-left="486" data-tchmi-left-unit="px" data-tchmi-show-labels="true" data-tchmi-show-ticks="true" data-tchmi-show-value-text="true" data-tchmi-top="30" data-tchmi-top-unit="px" data-tchmi-width="280" data-tchmi-width-unit="px" data-tchmi-unit="RPM" data-tchmi-max-value="%s%PLC1.GVL.Rotor_RPM_Limit%/s%" data-tchmi-value="%s%PLC1.GVL.Rotor_Calculated_RPM%/s%">
+<script data-tchmi-target-attribute="data-tchmi-range" type="application/json">
+[
+  {
+    "color": {
+      "color": "rgba(255, 0, 0, 1)"
+    },
+    "start": 0.0,
+    "end": "%s%PLC1.GVL.Rotor_RPM_Minimum%/s%"
+  },
+  {
+    "color": {
+      "color": "rgba(0, 128, 0, 1)"
+    },
+    "start": "%s%PLC1.GVL.Rotor_RPM_Minimum%/s%",
+    "end": "%s%PLC1.GVL.Rotor_RPM_Limit%/s%"
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-value-format" type="application/json">
+{
+  "objectType": "Function",
+  "fn": "GaugeValueFormatter",
+  "fnParams": []
+}
+</script>
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-tick-definition" type="application/json">
+{
+  "mainTickRange": 200.0,
+  "subTickRange": 50.0
+}
+</script>
+</div>
+<div id="Pellet_Length_InputBox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="3" data-tchmi-height="39" data-tchmi-height-unit="px" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-max-value="%s%PLC1.GVL.Maximum_Pellet_Length%/s%" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="351" data-tchmi-top-unit="px" data-tchmi-width="97" data-tchmi-width-unit="px" data-tchmi-value-font-size="18" data-tchmi-placeholder="" data-tchmi-value="%s%PLC1.Imperial_Metric_Switching.Pellet_Length_Displayed%/s%" data-tchmi-zero-padding="0">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Pellet_Length_InputBox.onUserInteractionFinished",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%s%PLC1.Imperial_Metric_Switching.Pellet_Length_Metric_Input%/s%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%ctrl%Pellet_Length_InputBox::Value%/ctrl%"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%s%PLC1.Imperial_Metric_Switching.Pellet_Length_Imperial_Input%/s%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%ctrl%Pellet_Length_InputBox::Value%/ctrl%"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="RotorTorqueGauge" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLinearGauge" data-tchmi-base-animation-time="1000" data-tchmi-height="70" data-tchmi-height-unit="px" data-tchmi-label-range="20" data-tchmi-left="487" data-tchmi-left-unit="px" data-tchmi-show-labels="true" data-tchmi-show-ticks="true" data-tchmi-show-value-text="true" data-tchmi-start-from-zero="true" data-tchmi-top="325" data-tchmi-top-unit="px" data-tchmi-width="300" data-tchmi-width-unit="px" data-tchmi-value-font-size="12" data-tchmi-label-font-size="12" data-tchmi-label-position="Bottom" data-tchmi-value="%s%PLC1.Drive_Communication.Rotor_Displayed_Torque%/s%">
+<script data-tchmi-target-attribute="data-tchmi-range" type="application/json">
+[
+  {
+    "color": {
+      "color": "rgba(0, 128, 0, 1)"
+    },
+    "start": 0,
+    "end": 35
+  },
+  {
+    "color": {
+      "color": "rgba(255, 165, 0, 1)"
+    },
+    "start": 35,
+    "end": 70
+  },
+  {
+    "color": {
+      "color": "rgba(255, 0, 0, 1)"
+    },
+    "start": 70,
+    "end": 100
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-value-format" type="application/json">
+{
+  "objectType": "Function",
+  "fn": "GaugeValueFormatter",
+  "fnParams": []
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-tick-definition" type="application/json">
+{
+  "mainTickRange": 20,
+  "subTickRange": 5
+}
+</script>
+
+</div>
+<div id="Rotor_Speed_TextBlock" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="579" data-tchmi-left-unit="px" data-tchmi-text="Rotor Speed" data-tchmi-top="3" data-tchmi-top-unit="px" data-tchmi-width="94" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="18">
+</div>
+<div id="Feedroll_Speed_TextBlock" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="115" data-tchmi-left-unit="px" data-tchmi-text="Feedroll Speed" data-tchmi-top="3" data-tchmi-top-unit="px" data-tchmi-width="112" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="18">
+</div>
+<div id="Rotor_Torque_TextBlock" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="55" data-tchmi-height-unit="px" data-tchmi-left="417" data-tchmi-left-unit="px" data-tchmi-text="Rotor Torque %" data-tchmi-top="335" data-tchmi-top-unit="px" data-tchmi-width="72" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="18">
+</div>
+<div id="Pellet_Length_Textblock" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-text="Pellet Length (inch)" data-tchmi-top="323" data-tchmi-top-unit="px" data-tchmi-width="153" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="18">
+</div>
+<div id="Metric_Imperial_Textblock" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="18" data-tchmi-height-unit="px" data-tchmi-left="137" data-tchmi-left-unit="px" data-tchmi-text="Imperial                                    Metric" data-tchmi-top="361" data-tchmi-top-unit="px" data-tchmi-width="192" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="12">
+</div>
+<div id="MetricToggleSwitch" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleSwitch" data-tchmi-height="39" data-tchmi-height-unit="px" data-tchmi-left="183" data-tchmi-left-unit="px" data-tchmi-top="349" data-tchmi-top-unit="px" data-tchmi-width="81" data-tchmi-width-unit="px" data-tchmi-state-symbol="%s%PLC1.GVL.Metric_Set_Bit%/s%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "MetricToggleSwitch.onToggleStateChanged",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%Pellet_Length_Textblock::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Pellet Length (mm)"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "value": false
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%Pellet_Length_Textblock::Text%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "value": "Pellet Length (in)"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": []
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      },
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%Feedroll_Speed_Tachometer::Unit%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Meters/Min"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "value": false
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%Feedroll_Speed_Tachometer::Unit%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "value": "Ft/Min"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": []
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      },
+      {
+        "objectType": "Condition",
+        "active": false,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%Minimum_Line_Speed_Lbl::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Minimum Rated Line Speed (m/min)"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "value": false
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%Minimum_Line_Speed_Lbl::Text%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "value": "Minimum Rated Line Speed (ft/min)"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": []
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      },
+      {
+        "objectType": "Condition",
+        "active": false,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%Minimum_Pellet_Length_Lbl::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Minimum Pellet Length (mm)"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "value": false
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%Minimum_Pellet_Length_Lbl::Text%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "value": "Minimum Pellet Length (inch)"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": []
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      },
+      {
+        "objectType": "Condition",
+        "active": false,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%Maximum_Line_Speed_Lbl::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Maximum Rated Line Speed (m/min)"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "value": false
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%Maximum_Line_Speed_Lbl::Text%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "value": "Maximum Rated Line Speed (ft/min)"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": []
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      },
+      {
+        "objectType": "Condition",
+        "active": false,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%Maximum_Pellet_Length_Lbl::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Maximum Pellet Length (mm)"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "value": false
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%Maximum_Pellet_Length_Lbl::Text%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "value": "Maximum Pellet Length (inch)"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": []
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="HourMeterLbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="724" data-tchmi-left-unit="px" data-tchmi-text="Hour Meter" data-tchmi-top="31" data-tchmi-top-unit="px" data-tchmi-width="72" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center">
+</div>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Home.onTouchStart",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%HourMeterTextbox::Text%/ctrl%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%s%PLC1.Hour_Meter.TotalRunTime%/s%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+<div id="HourMeterNumericInput" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="724" data-tchmi-left-unit="px" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="3" data-tchmi-top-unit="px" data-tchmi-value="%s%PLC1.Hour_Meter.TotalHours%/s%" data-tchmi-width="72" data-tchmi-width-unit="px" data-tchmi-is-enabled="false" data-tchmi-value-horizontal-alignment="Center">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+</div>

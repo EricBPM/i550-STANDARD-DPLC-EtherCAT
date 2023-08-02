@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Hour_Meter" Id="{153ad40f-8882-4e0d-9130-aee4ac2d8039}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Hour_Meter
+VAR PERSISTENT
+  	MyTimer   : TON;
+	TempRun: BOOL;
+END_VAR
+VAR PERSISTENT
+	TotalHours : REAL;
+	TotalMinutes : REAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[MyTimer(IN := TempRun, PT := T#1M);
+
+IF GVL.Pelletizer_Running THEN
+	TempRun:= TRUE;
+END_IF
+
+IF MyTimer.Q THEN
+	TotalMinutes := TotalMinutes + 1;
+	TotalHours := TotalHours + (1 / 60);
+	TempRun := FALSE;
+END_IF
+
+
+IF TotalMinutes >= 60 THEN
+	TotalHours := TotalHours + 1;	
+	TotalMinutes := 0;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="Hour_Meter">
+      <LineId Id="65" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="85" Count="1" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="82" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="57" Count="0" />
+      <LineId Id="89" Count="0" />
+      <LineId Id="70" Count="0" />
+      <LineId Id="58" Count="0" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="41" Count="0" />
+      <LineId Id="48" Count="0" />
+      <LineId Id="59" Count="0" />
+      <LineId Id="61" Count="0" />
+      <LineId Id="60" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

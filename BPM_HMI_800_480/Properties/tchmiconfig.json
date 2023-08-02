@@ -1,0 +1,338 @@
+{
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.760.44/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "basePath": "./framework",
+  "scaleMode": "None",
+  "startupView": "Desktop.view",
+  "loginPage": "/Pages/LoginPage.html",
+  "tcHmiServer": {
+    "websocketIntervalTime": 500,
+    "websocketTimeout": 20000,
+    "websocketSystemTimeout": 60000,
+    "websocketSubscriptionMode": "Change"
+  },
+  "activeTheme": "Base-Dark",
+  "themes": {
+    "Base-Dark": {
+      "resources": [
+        {
+          "name": "Themes/Base-Dark/Base-DarkStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        },
+        {
+          "name": "Themes/Base-Dark/Base-Dark.theme",
+          "description": "",
+          "type": "ThemedValues"
+        }
+      ],
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
+    },
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Base.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/Base/BaseStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
+    }
+  },
+  "dependencyFiles": [
+    {
+      "name": "Fonts/Fonts.css",
+      "description": "",
+      "type": "Stylesheet"
+    }
+  ],
+  "userControls": [],
+  "content": [
+    {
+      "url": "Pages/Documents.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/EtherCATDiagnostics.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/Home.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/MachineSettings.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/Recipes.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    }
+  ],
+  "views": [
+    {
+      "url": "Desktop.view",
+      "preload": false,
+      "keepAlive": false,
+      "preloadBindings": false
+    }
+  ],
+  "userFunctions": [],
+  "symbols": {
+    "internal": {
+      "MediaQueryList": {
+        "value": [
+          {
+            "name": "Desktop",
+            "maxWidth": 1920,
+            "minWidth": 0,
+            "controlBehaviourList": [
+              {
+                "controlType": "TcHmi.Controls.BaseTemplate.TcHmiNavigation",
+                "controlID": "Navigation_Left",
+                "displayOption": "burger_top"
+              }
+            ]
+          }
+        ],
+        "type": "tchmi:framework#/definitions/TcHmi.Functions.BaseTemplate.MediaQueryList",
+        "persist": true,
+        "readonly": true
+      },
+      "AffectedControls": {
+        "value": [
+          {
+            "controlID": "Header_Top",
+            "position": "Top"
+          },
+          {
+            "controlID": "Navigation_Left",
+            "position": "Left"
+          },
+          {
+            "controlID": "Region_Center",
+            "position": "Center"
+          }
+        ],
+        "type": "tchmi:framework#/definitions/TcHmi.Functions.BaseTemplate.AffectedControlList",
+        "persist": true,
+        "readonly": true
+      }
+    },
+    "themedResources": {
+      "TR_Icon_Home_Normal": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Images/Icons/startpage_normal.svg",
+          "Base": "Images/Icons/startpage_normal.svg"
+        }
+      },
+      "TR_Icon_Home_Active": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Images/Icons/startpage_active.svg",
+          "Base": "Images/Icons/startpage_active.svg"
+        }
+      },
+      "TR_Icon_Home_Pressed": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Images/Icons/startpage_pressed.svg",
+          "Base": "Images/Icons/startpage_pressed.svg"
+        }
+      },
+      "TR_Icon_Recipes_normal": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Images/Icons/recipe_normal.svg",
+          "Base": "Images/Icons/recipe_normal.svg"
+        }
+      },
+      "TR_Icon_Recipes_pressed": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Images/Icons/recipe_pressed.svg",
+          "Base": "Images/Icons/recipe_pressed.svg"
+        }
+      },
+      "TR_Icon_Recipes_active": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Images/Icons/recipe_active.svg",
+          "Base": "Images/Icons/recipe_active.svg"
+        }
+      },
+      "TR_Icon_MachineSettings_normal": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Images/Icons/settings_normal.svg",
+          "Base": "Images/Icons/settings_normal.svg"
+        }
+      },
+      "TR_Icon_MachineSettings_pressed": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Images/Icons/settings_pressed.svg",
+          "Base": "Images/Icons/settings_pressed.svg"
+        }
+      },
+      "TR_Icon_MachineSettings_active": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Images/Icons/settings_active.svg",
+          "Base": "Images/Icons/settings_active.svg"
+        }
+      },
+      "TR_Icon_Documents_normal": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Images/Icons/manual_normal.svg",
+          "Base": "Images/Icons/manual_normal.svg"
+        }
+      },
+      "TR_Icon_Documents_pressed": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Images/Icons/manual_pressed.svg",
+          "Base": "Images/Icons/manual_pressed.svg"
+        }
+      },
+      "TR_Icon_Documents_active": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Images/Icons/manual_active.svg",
+          "Base": "Images/Icons/manual_active.svg"
+        }
+      },
+      "TR_Icon_EtherCATDiagnostics_normal": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Images/Icons/plc-normal.svg",
+          "Base": "Images/Icons/plc-normal.svg"
+        }
+      },
+      "TR_Icon_EtherCATDiagnostics_pressed": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Images/Icons/plc-pressed.svg",
+          "Base": "Images/Icons/plc-pressed.svg"
+        }
+      },
+      "TR_Icon_EtherCATDiagnostics_active": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Images/Icons/plc-active.svg",
+          "Base": "Images/Icons/plc-active.svg"
+        }
+      }
+    }
+  },
+  "trigger": [],
+  "actionTemplates": [],
+  "languages": {
+    "de": "Localization/de.localization",
+    "en": "Localization/en.localization"
+  },
+  "languageFallback": "",
+  "disableLoadingOptimization": false,
+  "creatorSettings": {
+    "viewport": {
+      "defaultWidth": 1920,
+      "defaultHeight": 1080
+    }
+  },
+  "binding": {
+    "symbolError": "Ignore"
+  },
+  "packages": [
+    {
+      "name": "Beckhoff.TwinCAT.HMI.BaseTemplate",
+      "basePath": "/Beckhoff.TwinCAT.HMI.BaseTemplate"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Controls",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Controls"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.EcDiagnosticsControl",
+      "basePath": "/Beckhoff.TwinCAT.HMI.EcDiagnosticsControl"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Framework",
+      "basePath": "/framework"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Functions",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Functions"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.PDFViewer",
+      "basePath": "/Beckhoff.TwinCAT.HMI.PDFViewer"
+    }
+  ],
+  "keyboardLayouts": [
+    {
+      "url": "KeyboardLayouts/German - compact.keyboard.json"
+    },
+    {
+      "url": "KeyboardLayouts/Numpad (plusminus).keyboard.json"
+    },
+    {
+      "url": "KeyboardLayouts/US - compact.keyboard.json"
+    }
+  ],
+  "systemKeyboard": {
+    "providerName": "Beckhoff.TcHmiKeyboard",
+    "projectKeyboardMapping": {
+      "de": {
+        "text": "KeyboardLayouts/German - compact.keyboard.json",
+        "decimal": "KeyboardLayouts/Numpad (plusminus).keyboard.json",
+        "numeric": ""
+      },
+      "en": {
+        "text": "KeyboardLayouts/US - compact.keyboard.json",
+        "decimal": "KeyboardLayouts/Numpad (plusminus).keyboard.json",
+        "numeric": "KeyboardLayouts/Numpad (plusminus).keyboard.json"
+      }
+    }
+  },
+  "systemPopups": {
+    "providerName": "Beckhoff.TcHmiPopups"
+  }
+}

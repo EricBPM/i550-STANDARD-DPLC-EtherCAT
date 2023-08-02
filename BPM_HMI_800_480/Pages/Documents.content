@@ -1,0 +1,145 @@
+<div id="Documents" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="800" data-tchmi-height="400" data-tchmi-width-unit="px" data-tchmi-height-unit="px" data-tchmi-creator-viewport-width="800" data-tchmi-creator-viewport-height="480">
+
+<div id="TcHmiFileExplorer" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiFileExplorer" data-tchmi-height="370" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="31" data-tchmi-top-unit="px" data-tchmi-width="400" data-tchmi-width-unit="px" data-tchmi-path="" data-tchmi-root="Customer/">
+
+
+
+    
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "download",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "download",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "download",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "delete",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "delete",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "delete",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "rename",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "rename",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "rename",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "create",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "create",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "create",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="TcHmiPdfViewer" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiPdfViewer" data-tchmi-height="370" data-tchmi-height-unit="px" data-tchmi-left="400" data-tchmi-left-unit="px" data-tchmi-top="31" data-tchmi-top-unit="px" data-tchmi-width="400" data-tchmi-width-unit="px" data-tchmi-file="Customer/SB50-2301_.pdf">
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="TcHmiTextblock_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Customer Manual Files" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="18">
+</div>
+<div id="TcHmiTextblock_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="410" data-tchmi-left-unit="px" data-tchmi-text="PDF Viewer" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="18">
+</div>
+</div>

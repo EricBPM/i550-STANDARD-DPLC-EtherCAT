@@ -1,0 +1,91 @@
+<div id="EtherCATDiagnostics" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="800" data-tchmi-width-unit="px" data-tchmi-height="400" data-tchmi-height-unit="px" data-tchmi-creator-viewport-width="800" data-tchmi-creator-viewport-height="480">
+
+  <div id="TcHmiTextblock_EtherCATDiagnostics_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="38" data-tchmi-height-unit="px" data-tchmi-left="26" data-tchmi-left-unit="px" data-tchmi-text="%l%L_EtherCATDiagnostics%/l%" data-tchmi-top="16" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="26">
+    <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+      [
+      "headline-2"
+      ]
+    </script>
+  </div>
+  <div id="TcHmiContainer_EtherCATDiagnostics_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="16" data-tchmi-left-unit="px" data-tchmi-top="54" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="16" data-tchmi-bottom="16">
+
+    <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+      [
+      "background-container"
+      ]
+    </script>
+
+    <div id="TcHmiEcDiagnostics_EtherCATDiagnostics_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiEcDiagnostics" data-tchmi-allow-zoom-and-pan="true" data-tchmi-device="Device1" data-tchmi-left="16" data-tchmi-left-unit="px" data-tchmi-toolbox-reset-view="true" data-tchmi-top="17" data-tchmi-top-unit="px" data-tchmi-right="16" data-tchmi-bottom="15">
+    
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+  
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+</div>

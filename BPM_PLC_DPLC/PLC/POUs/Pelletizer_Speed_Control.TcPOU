@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Pelletizer_Speed_Control" Id="{ff54fcd7-1f14-43df-9a76-1ad4a6403660}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Pelletizer_Speed_Control
+VAR
+	FirstScan : BOOL := TRUE;
+	TempSpeed: REAL;
+	
+	FeedrollMot_Speed_Hz AT %Q*: INT;	//Map to Drive Parameter for Speed control Using Hertz
+	RotorMot_Speed_Hz  AT %Q*: INT;		//Map to Drive Parameter for Speed control Using Hertz
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Read Analog Input for speed setting as Percentage.
+TempSpeed := INT_TO_REAL(GVL.FeedrolAnalogInput) / 1000;
+
+
+IF GVL.Pelletizer_Running OR FirstScan THEN
+	
+DPLC(
+	Pellet_Length_Inch_Input := Imperial_Metric_Switching.Pellet_Length_Imperial_Input, 
+	Speed_Input := 	TempSpeed, 
+	RotorMot_Rated_RPM := GVL.RotorMot_Rated_RPM, 
+	RotorMot_Rated_Hz := GVL.RotorMot_Rated_Hz, 
+	RotorMot_Max_Hz := GVL.RotorMot_Max_Hz,
+	RotorMot_Min_Hz := GVL.RotorMot_Min_Hz,
+	Rotor_Drive_Pulley := GVL.Rotor_Drive_Pulley, 
+	Rotor_Driven_Pulley := GVL.Rotor_Driven_Pulley, 
+	Rotor_Tooth_Count := GVL.Rotor_Tooth_Count, 
+	Rotor_RPM_Limit := GVL.Rotor_RPM_Limit,
+	FeedrollMot_Rated_RPM := GVL.FeedrollMot_Rated_RPM, 
+	FeedrollMot_Rated_Hz := GVL.FeedrollMot_Rated_Hz, 
+	FeedrollMot_Max_Hz := GVL.FeedrollMot_Max_Hz,
+	FeedrollMot_Min_Hz := GVL.FeedrollMot_Min_Hz,
+	Feedroll_Drive_Pulley := GVL.Feedroll_Drive_Pulley, 
+	Feedroll_Driven_Pulley := GVL.Feedroll_Driven_Pulley, 
+	Feedroll_Diameter_Inch := GVL.Feedroll_Diameter_Inch, 
+	Metric_Set_Bit := GVL.Metric_Set_Bit,
+	Pellet_Length_Output => GVL.Pellet_Length_Output,
+	Feedroll_Motor_Speed_Hz_int => Pelletizer_Speed_Control.FeedrollMot_Speed_Hz, 
+	Rotor_Motor_Speed_Hz_int => Pelletizer_Speed_Control.RotorMot_Speed_Hz,
+	Rotor_Speed_RPM => GVL.Rotor_Calculated_RPM,
+	FeedRate_Feet_Per_Minute => GVL.FeedRate_Line_Speed,
+	Rotor_RPM_Minimum => GVL.Rotor_RPM_Minimum,
+	Maximum_Line_Speed => GVL.Maximum_Line_Speed,
+	Minimum_Line_Speed => GVL.Minimum_Line_Speed,
+	Maximum_Pellet_Length => GVL.Maximum_Pellet_Length,
+	Minimum_Pellet_Length => GVL.Minimum_Pellet_Length
+);
+
+ELSE
+	GVL.Rotor_Calculated_RPM := 0;//Display 0 when not running.
+	GVL.FeedRate_Line_Speed := 0;//Display 0 when not running.
+END_IF
+
+FirstScan := FALSE;]]></ST>
+    </Implementation>
+    <LineIds Name="Pelletizer_Speed_Control">
+      <LineId Id="112" Count="0" />
+      <LineId Id="58" Count="0" />
+      <LineId Id="168" Count="0" />
+      <LineId Id="143" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="153" Count="0" />
+      <LineId Id="70" Count="5" />
+      <LineId Id="94" Count="0" />
+      <LineId Id="76" Count="6" />
+      <LineId Id="91" Count="0" />
+      <LineId Id="83" Count="2" />
+      <LineId Id="134" Count="0" />
+      <LineId Id="152" Count="0" />
+      <LineId Id="86" Count="3" />
+      <LineId Id="100" Count="0" />
+      <LineId Id="90" Count="0" />
+      <LineId Id="92" Count="0" />
+      <LineId Id="95" Count="1" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="157" Count="0" />
+      <LineId Id="155" Count="0" />
+      <LineId Id="160" Count="0" />
+      <LineId Id="162" Count="0" />
+      <LineId Id="161" Count="0" />
+      <LineId Id="164" Count="0" />
+      <LineId Id="156" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

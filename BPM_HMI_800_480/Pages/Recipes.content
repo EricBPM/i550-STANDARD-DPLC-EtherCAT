@@ -1,0 +1,176 @@
+<div id="Recipes" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="800" data-tchmi-height="400" data-tchmi-width-unit="px" data-tchmi-height-unit="px" data-tchmi-creator-viewport-width="800" data-tchmi-creator-viewport-height="480">
+
+<div id="TcHmiRecipeEdit" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRecipeEdit" data-tchmi-height="246" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="154" data-tchmi-top-unit="px" data-tchmi-width="800" data-tchmi-width-unit="px">
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "create",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "create",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "create",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "rename",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "rename",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "rename",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "delete",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "delete",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "delete",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "editRecipe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "editRecipe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "editRecipe",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "activateRecipe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "activateRecipe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "activateRecipe",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "teachRecipe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "teachRecipe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "teachRecipe",
+    "group": "Operator",
+    "permission": "Deny"
+  }
+]
+</script>
+</div>
+<div id="TcHmiRecipeSelect" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRecipeSelect" data-tchmi-height="101" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-server-interval="1000" data-tchmi-top="25" data-tchmi-top-unit="px" data-tchmi-width="800" data-tchmi-width-unit="px">
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "teachRecipe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "teachRecipe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "activateRecipe",
+    "group": "Operator",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "teachRecipe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="TcHmiTextblock" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="13" data-tchmi-left-unit="px" data-tchmi-text="Pellet Length Preset Selection" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="374" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="18">
+</div>
+<div id="TcHmiTextblock_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Pellet Length Preset Editor" data-tchmi-top="128" data-tchmi-top-unit="px" data-tchmi-width="285" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="18">
+</div>
+</div>

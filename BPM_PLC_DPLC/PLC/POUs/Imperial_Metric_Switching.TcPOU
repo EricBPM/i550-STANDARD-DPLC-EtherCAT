@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Imperial_Metric_Switching" Id="{6f9d0641-37cb-4fae-bb7b-2d32027ad281}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Imperial_Metric_Switching
+VAR PERSISTENT
+	Pellet_Length_Displayed : REAL;
+	Pellet_Length_Metric_Input : REAL;
+	Pellet_Length_Imperial_Input : REAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+
+IF GVL.Metric_Set_Bit THEN
+		Pellet_Length_Displayed := Pellet_Length_Metric_Input;
+		Pellet_Length_Imperial_Input := Pellet_Length_Metric_Input / 25.4;
+ELSE
+		Pellet_Length_Displayed := Pellet_Length_Imperial_Input;
+		Pellet_Length_Metric_Input := Pellet_Length_Imperial_Input * 25.4;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="Imperial_Metric_Switching">
+      <LineId Id="26" Count="1" />
+      <LineId Id="6" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="9" Count="1" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.42">
+	<ImageDatas>
+		<ImageData Id="1000">424de6000000000000007600000028000000100000000e000000010004000000000070000000000000000000000000000000000000000000000000008000008000000080800080000000800080008080000080808000c0c0c0000000ff0000ff000000ffff00ff000000ff00ff00ffff0000ffffff00fffffffffffffffffccccccffffffffffcfffecefffffffffcfffecef80008fffcfffecef00000fffcfffecef00900fffcfffecef00000fffcfffecef80008fffccccccefffffffffcfffecefffffffffccffccefffffffffecccceeffffffffffeeeeefffffffffffffffffffffffff</ImageData>
+	</ImageDatas>
+	<Project ProjectGUID="{3124E0AA-9BB0-4D73-B39B-C2A7FA057F7D}" TargetNetId="169.254.75.91.1.1" Target64Bit="true" ShowHideConfigurations="#x3c7">
+		<System>
+			<Settings MaxCpus="4">
+				<Cpu/>
+				<Cpu CpuId="1"/>
+				<Cpu CpuId="2"/>
+				<Cpu CpuId="3"/>
+				<IoIdleTask Priority="6"/>
+			</Settings>
+			<Licenses>
+				<Target>
+					<ManualSelect>{D58728E0-7762-4145-8A93-80D55E0453A6}</ManualSelect>
+				</Target>
+			</Licenses>
+			<Tasks>
+				<Task Id="3" Priority="4" CycleTime="30000" AmsPort="350" DisableFpExceptions="true" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{C2463DFE-8D25-458F-B39B-892E853BBF0C}" Name="PLC" PrjFilePath="PLC\PLC.plcproj" TmcFilePath="PLC\PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC\PLC.tmc" TmcHash="{31AE5E44-DD9F-FA0A-B5E1-FEFCB9F2550F}">
+					<Name>PLC Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>Drive_Communication.Feedroll_Drive_Message</Name>
+							<Comment><![CDATA[Drive Faults]]></Comment>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>Drive_Communication.Rotor_Active_Torque</Name>
+							<Comment><![CDATA[Rotor Torque as percentage of Rated Motor Torque]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL.FeedrolAnalogInput</Name>
+							<Comment><![CDATA[Analog Input as a percentage of the Analog Input Setting // 0-10V__0-100%]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>Drive_Communication.Feedroll_Drive_Running</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Drive_Communication.Feedroll_Drive_Status</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
+							<Name>Drive_Communication.Rotor_Drive_Message</Name>
+							<Comment><![CDATA[Drive Faults]]></Comment>
+							<Type>USINT</Type>
+						</Var>
+						<Var>
+							<Name>Drive_Communication.Rotor_Drive_Running</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>Drive_Communication.Rotor_Drive_Status</Name>
+							<Type>UINT</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="2" AreaNo="1">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>Pelletizer_Speed_Control.FeedrollMot_Speed_Hz</Name>
+							<Comment><![CDATA[Map to Drive Parameter for Speed control Using Hertz]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>Pelletizer_Speed_Control.RotorMot_Speed_Hz</Name>
+							<Comment><![CDATA[Map to Drive Parameter for Speed control Using Hertz]]></Comment>
+							<Type>INT</Type>
+						</Var>
+					</Vars>
+					<UnrestoredVarLinks ImportTime="2023-07-31T11:20:01">
+						<OwnerA Name="InputDst" Prefix="TIPC^PLC^PLC Instance" Type="1">
+							<OwnerB Name="TIID^DualDrive (EtherCAT)^Feedroll Drive">
+								<Link VarA="GVL.Pelletizer_Running" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="TPDO (A) user config^Drive status" RestoreInfo="TypeMismatch" OldTypeA="INT" OldGuidA="{18071995-0000-0000-0000-000000000006}" NewTypeA="UINT" NewGuidA="{18071995-0000-0000-0000-000000000005}"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+					<Contexts>
+						<Context>
+							<Id NeedCalleeCall="true">0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>4</Priority>
+							<CycleTime>3000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="4" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+		<Io>
+			<Device Id="1" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="169.254.75.91.1.1" RemoteName="DualDrive (EtherCAT)" InfoImageId="2">
+				<Name>DualDrive (EtherCAT)</Name>
+				<AddressInfo>
+					<Pnp>
+						<DeviceDesc>EtherCAT (TwinCAT-Intel PCI Ethernet Adapter (Gigab</DeviceDesc>
+						<DeviceName>\DEVICE\{EE9F42D7-C1D5-4430-A0FE-C09E45E17188}</DeviceName>
+						<DeviceData>7ccbe2e63fe5</DeviceData>
+					</Pnp>
+				</AddressInfo>
+				<Image Id="1" AddrType="9" ImageType="3">
+					<Name>Image</Name>
+				</Image>
+				<Box Id="1" BoxType="9099" BoxFlags="#x00000020">
+					<Name>Feedroll Drive</Name>
+					<ImageId>1000</ImageId>
+					<EtherCAT SlaveType="2" PdiType="#x3080" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="13" EoeType="1" FoeType="1" VendorId="#x0000003b" ProductCode="#x69055000" RevisionNo="#x00070000" InfoDataAddr="true" EnableWdDivider0400="true" EnableWdTime0420="true" TimeoutStateChange2="3000" TimeoutStateChange3="3000" TimeoutStateChange4="3000" TimeoutMailbox2="2000" CheckRevisionNoType="2" PortPhys="17" IdentificationAdo="308" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="i550 Cabinet V07.00.xx" Desc="Inverter i550 Cabinet" PortABoxInfo="#x00ffffff">
+						<SyncMan>001080002600010001000000800000018000001026010000</SyncMan>
+						<SyncMan>001180002200010002000000800000018000001122010000</SyncMan>
+						<SyncMan>001206006400010003000000000020000400001264010000</SyncMan>
+						<SyncMan>00130a002000010004000000000020000600001320010000</SyncMan>
+						<Fmmu>0000000000000000001200020100000001000000000000000000000000000000</Fmmu>
+						<Fmmu>0000000000000000001300010100000002000000000000000000000000000000</Fmmu>
+						<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
+						<SwitchPortData>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</SwitchPortData>
+						<BootStrapData>0010000100110001</BootStrapData>
+						<Pdo Name="TPDO (A) Velocity" Index="#x1a03" Flags="#x0010" SyncMan="3">
+							<Entry Name="CiA status word" Index="#x6041">
+								<Type>UINT</Type>
+							</Entry>
+							<Entry Name="Actual speed" Index="#x6044">
+								<Type>INT</Type>
+							</Entry>
+							<Entry Name="Error code" Index="#x603f">
+								<Type>UINT</Type>
+							</Entry>
+						</Pdo>
+						<Pdo Name="TPDO (A) user config" Index="#x1a05" Flags="#x0000" SyncMan="3">
+							<Entry Name="FeedrollAnalogInput1" Index="#x2da4" Sub="#x01">
+								<Type>INT</Type>
+							</Entry>
+							<Entry Name="NetWordOUT1" Index="#x400a" Sub="#x01">
+								<Type>UINT</Type>
+							</Entry>
+						</Pdo>
+						<Pdo Name="RPDO (A) Velocity" Index="#x1603" InOut="1" Flags="#x0010" SyncMan="2">
+							<Entry Name="CiA control word" Index="#x6040">
+								<Type>UINT</Type>
+							</Entry>
+							<Entry Name="Set speed" Index="#x6042">
+								<Type>INT</Type>
+							</Entry>
+						</Pdo>
+						<Pdo Name="RPDO (A) user config" Index="#x1605" InOut="1" Flags="#x0000" SyncMan="2">
+							<Entry Name="Velocity mode setpoint" Index="#x400b" Sub="#x06">
+								<Type>INT</Type>
+							</Entry>
+						</Pdo>
+					</EtherCAT>
+				</Box>
+				<Box Id="2" BoxType="9099" BoxFlags="#x00000020">
+					<Name>Rotor Drive</Name>
+					<ImageId>1000</ImageId>
+					<EtherCAT SlaveType="2" PdiType="#x3080" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="13" EoeType="1" FoeType="1" VendorId="#x0000003b" ProductCode="#x69055000" RevisionNo="#x00060004" InfoDataAddr="true" EnableWdDivider0400="true" EnableWdTime0420="true" TimeoutStateChange2="3000" TimeoutStateChange3="3000" TimeoutStateChange4="3000" TimeoutMailbox2="2000" CheckRevisionNoType="2" PortPhys="17" IdentificationAdo="308" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="i550 Cabinet V06.04.xx" Desc="Inverter i550 Cabinet" PortABoxInfo="#x01000001">
+						<SyncMan>001080002600010001000000800000018000001026010000</SyncMan>
+						<SyncMan>001180002200010002000000800000018000001122010000</SyncMan>
+						<SyncMan>001206006400010003000000000020000400001264010000</SyncMan>
+						<SyncMan>00130a002000010004000000000020000600001320010000</SyncMan>
+						<Fmmu>0000000000000000001200020100000001000000000000000000000000000000</Fmmu>
+						<Fmmu>0000000000000000001300010100000002000000000000000000000000000000</Fmmu>
+						<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
+						<SwitchPortData>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</SwitchPortData>
+						<BootStrapData>0010000100110001</BootStrapData>
+						<Pdo Name="TPDO (A) Velocity" Index="#x1a03" Flags="#x0010" SyncMan="3">
+							<Entry Name="CiA status word" Index="#x6041">
+								<Type>UINT</Type>
+							</Entry>
+							<Entry Name="Actual speed" Index="#x6044">
+								<Type>INT</Type>
+							</Entry>
+							<Entry Name="Error code" Index="#x603f">
+								<Type>UINT</Type>
+							</Entry>
+						</Pdo>
+						<Pdo Name="TPDO (A) user config" Index="#x1a05" Flags="#x0000" SyncMan="3">
+							<Entry Name="Actual torque" Index="#x6077">
+								<Type>INT</Type>
+							</Entry>
+							<Entry Name="NetWordOUT1" Index="#x400a" Sub="#x01">
+								<Type>UINT</Type>
+							</Entry>
+						</Pdo>
+						<Pdo Name="RPDO (A) Velocity" Index="#x1603" InOut="1" Flags="#x0010" SyncMan="2">
+							<Entry Name="CiA control word" Index="#x6040">
+								<Type>UINT</Type>
+							</Entry>
+							<Entry Name="Set speed" Index="#x6042">
+								<Type>INT</Type>
+							</Entry>
+						</Pdo>
+						<Pdo Name="RPDO (A) user config" Index="#x1605" InOut="1" Flags="#x0000" SyncMan="2">
+							<Entry Name="Velocity mode setpoint" Index="#x400b" Sub="#x06">
+								<Type>INT</Type>
+							</Entry>
+						</Pdo>
+					</EtherCAT>
+				</Box>
+				<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="3" MaxSwitchFrames="140"/>
+			</Device>
+		</Io>
+	</Project>
+	<Mappings>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
+		<OwnerA Name="TIPC^PLC^PLC Instance">
+			<OwnerB Name="TIID^DualDrive (EtherCAT)^Feedroll Drive">
+				<Link VarA="PlcTask Inputs^Drive_Communication.Feedroll_Drive_Running" VarB="TPDO (A) user config^NetWordOUT1" Size="1" OffsB="6"/>
+				<Link VarA="PlcTask Inputs^GVL.FeedrolAnalogInput" VarB="TPDO (A) user config^FeedrollAnalogInput1"/>
+				<Link VarA="PlcTask Outputs^Pelletizer_Speed_Control.FeedrollMot_Speed_Hz" VarB="RPDO (A) user config^Velocity mode setpoint"/>
+			</OwnerB>
+			<OwnerB Name="TIID^DualDrive (EtherCAT)^Rotor Drive">
+				<Link VarA="PlcTask Inputs^Drive_Communication.Rotor_Active_Torque" VarB="TPDO (A) user config^Actual torque"/>
+				<Link VarA="PlcTask Inputs^Drive_Communication.Rotor_Drive_Running" VarB="TPDO (A) user config^NetWordOUT1" Size="1" OffsB="6"/>
+				<Link VarA="PlcTask Outputs^Pelletizer_Speed_Control.RotorMot_Speed_Hz" VarB="RPDO (A) user config^Velocity mode setpoint"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmProject>

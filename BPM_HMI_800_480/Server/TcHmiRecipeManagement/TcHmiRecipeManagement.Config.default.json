@@ -1,0 +1,83 @@
+{
+    "recipeList": {
+        "Preset 0.100 Inch": {
+            "recipeTypeName": "Pellet Length - Inches",
+            "values": {
+                "Millimeters": false,
+                "PLC1.Imperial_Metric_Switching.Pellet_Length_Imperial_Input": 0.1
+            }
+        },
+        "Preset 0.125 Inch": {
+            "recipeTypeName": "Pellet Length - Inches",
+            "values": {
+                "Millimeters": false,
+                "PLC1.Imperial_Metric_Switching.Pellet_Length_Imperial_Input": 0.125
+            }
+        },
+        "Preset 3.000 mm": {
+            "recipeTypeName": "Pellet Length - Millimeters",
+            "values": {
+                "PLC1.GVL.Metric_Set_Bit": true,
+                "PLC1.Imperial_Metric_Switching.Pellet_Length_Metric_Input": 3.0
+            }
+        }
+    },
+    "recipeTypeList": {
+        "Pellet Length - Inches": {
+            "members": {
+                "Millimeters": {
+                    "comment": "Set to true if the measurement is to be entered in Millimeters",
+                    "defaultValue": false,
+                    "enabled": true,
+                    "group": "",
+                    "order": 0,
+                    "schema": {},
+                    "symbol": "PLC1.GVL.Metric_Set_Bit",
+                    "unit": ""
+                },
+                "PLC1.Imperial_Metric_Switching.Pellet_Length_Imperial_Input": {
+                    "comment": "Pellet Length in Inches",
+                    "defaultValue": 0.125,
+                    "enabled": true,
+                    "group": "",
+                    "order": 1,
+                    "schema": {},
+                    "symbol": "PLC1.Imperial_Metric_Switching.Pellet_Length_Imperial_Input",
+                    "unit": ""
+                }
+            },
+            "options": {
+                "enabled": "None"
+            },
+            "recipeTypeNames": []
+        },
+        "Pellet Length - Millimeters": {
+            "members": {
+                "PLC1.GVL.Metric_Set_Bit": {
+                    "comment": "Pellet Length in Millimeters",
+                    "defaultValue": true,
+                    "enabled": true,
+                    "group": "",
+                    "order": 1,
+                    "schema": {},
+                    "symbol": "PLC1.GVL.Metric_Set_Bit",
+                    "unit": ""
+                },
+                "PLC1.Imperial_Metric_Switching.Pellet_Length_Metric_Input": {
+                    "comment": "Set to true if the measurement is to be entered in Millimeters",
+                    "defaultValue": 3.0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 0,
+                    "schema": {},
+                    "symbol": "PLC1.Imperial_Metric_Switching.Pellet_Length_Metric_Input",
+                    "unit": ""
+                }
+            },
+            "options": {
+                "enabled": "None"
+            },
+            "recipeTypeNames": []
+        }
+    }
+}

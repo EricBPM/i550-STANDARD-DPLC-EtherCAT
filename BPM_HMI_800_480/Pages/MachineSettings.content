@@ -1,0 +1,2354 @@
+<div id="MachineSettings" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="780" data-tchmi-width-unit="px" data-tchmi-height="400" data-tchmi-height-unit="px" data-tchmi-height-mode="Content" data-tchmi-creator-viewport-width="800" data-tchmi-creator-viewport-height="480" data-tchmi-zindex="1">
+
+  <div id="TcHmiGrid_MachineSettings_1" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height="720" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="780" data-tchmi-width-unit="px" data-tchmi-height-mode="Content" data-tchmi-zindex="1">
+    <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+      [
+      {
+      "width": 1.0,
+      "widthUnit": "factor",
+      "widthMode": "Value",
+      "maxWidthUnit": "px",
+      "minWidth": 320.0,
+      "minWidthUnit": "px",
+      "overflow": false
+      },
+      {
+      "width": 1.0,
+      "widthUnit": "factor",
+      "widthMode": "Value",
+      "maxWidthUnit": "px",
+      "minWidth": 320.0,
+      "minWidthUnit": "px",
+      "overflow": false
+      },
+      {
+      "width": 1.0,
+      "widthUnit": "factor",
+      "widthMode": "Value",
+      "maxWidthUnit": "px",
+      "minWidth": 320.0,
+      "minWidthUnit": "px",
+      "overflow": false
+      },
+      {
+      "width": 1.0,
+      "widthUnit": "factor",
+      "widthMode": "Value",
+      "maxWidthUnit": "px",
+      "minWidth": 320.0,
+      "minWidthUnit": "px",
+      "overflow": false
+      },
+      {
+      "width": 1.0,
+      "widthUnit": "factor",
+      "widthMode": "Value",
+      "maxWidthUnit": "px",
+      "minWidth": 320.0,
+      "minWidthUnit": "px",
+      "overflow": false
+      },
+      {
+      "width": 1.0,
+      "widthUnit": "factor",
+      "widthMode": "Value",
+      "maxWidthUnit": "px",
+      "minWidth": 320.0,
+      "minWidthUnit": "px",
+      "overflow": false
+      },
+      {
+      "width": 1.0,
+      "widthUnit": "factor",
+      "widthMode": "Value",
+      "maxWidthUnit": "px",
+      "minWidth": 320.0,
+      "minWidthUnit": "px",
+      "overflow": false
+      },
+      {
+      "width": 1.0,
+      "widthUnit": "factor",
+      "widthMode": "Value",
+      "maxWidthUnit": "px",
+      "minWidth": 320.0,
+      "minWidthUnit": "px",
+      "overflow": false
+      }
+      ]
+    </script>
+    <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+      [
+      {
+      "height": 1.0,
+      "heightUnit": "factor",
+      "heightMode": "Value",
+      "maxHeightUnit": "px",
+      "minHeight": 320.0,
+      "minHeightUnit": "px",
+      "overflow": false
+      }
+      ]
+    </script>
+
+    <div id="TcHmiContainer_MachineSettings_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-zindex="1">
+
+
+      <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+        [
+        "background-container"
+        ]
+      </script>
+
+    <div id="Rotor_Mot_Rated_RPM_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-top="62" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="1800" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-zindex="1" data-tchmi-text="%s%PLC1.GVL.RotorMot_Rated_RPM%/s%">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Rotor_Mot_Rated_RPM_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.RotorMot_Rated_RPM%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Rotor_Mot_Rated_RPM_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="Rotor_Mot_Max_Hz_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-top="172" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="85" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.RotorMot_Max_Hz%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Rotor_Mot_Max_Hz_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.RotorMot_Max_Hz%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Rotor_Mot_Max_Hz_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="Rotor_Mot_Max_Hz_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-text="Rotor Motor Maximum Hz" data-tchmi-top="152" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="Rotor_Mot_Rated_Hz_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-top="117" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="60" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.RotorMot_Rated_Hz%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Rotor_Mot_Rated_Hz_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.RotorMot_Rated_Hz%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Rotor_Mot_Rated_Hz_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="Rotor_Mot_Rated_Hz_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-text="Rotor Motor Rated Hz" data-tchmi-top="97" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="Rotor_Mot_Rated_RPM_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-text="Rotor Motor Rated RPM" data-tchmi-top="42" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="RotorMotorData_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-text="Rotor Motor Data" data-tchmi-top="12" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "headline-3"
+          ]
+        </script>
+      </div>
+
+
+</div>
+
+    <div data-tchmi-grid-column-index="1" id="TcHmiContainer_MachineSettings_2" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-zindex="1">
+
+
+      <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+        [
+        "background-container"
+        ]
+      </script>
+
+    <div id="Feedroll_Mot_Max_Hz_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="7" data-tchmi-left-unit="px" data-tchmi-top="167" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="85" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.FeedrollMot_Max_Hz%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Feedroll_Mot_Max_Hz_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.FeedrollMot_Max_Hz%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Feedroll_Mot_Max_Hz_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="Feedroll_Mot_Max_Hz_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="7" data-tchmi-left-unit="px" data-tchmi-text="Feedroll Motor Maximum Hz" data-tchmi-top="147" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="Feedroll_Mot_Rated_Hz_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="7" data-tchmi-left-unit="px" data-tchmi-top="112" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="60" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.FeedrollMot_Rated_Hz%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Feedroll_Mot_Rated_Hz_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.FeedrollMot_Rated_Hz%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Feedroll_Mot_Rated_Hz_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="Feedroll_Mot_Rated_Hz_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="7" data-tchmi-left-unit="px" data-tchmi-text="Feedroll Motor Rated Hz" data-tchmi-top="92" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="Feedroll_Mot_Rated_RPM_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="7" data-tchmi-left-unit="px" data-tchmi-top="57" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="1800" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.FeedrollMot_Rated_RPM%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Feedroll_Mot_Rated_RPM_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.FeedrollMot_Rated_RPM%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Feedroll_Mot_Rated_RPM_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="Feedroll_Mot_RatedRPM_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="7" data-tchmi-left-unit="px" data-tchmi-text="Feedroll Motor Rated RPM" data-tchmi-top="37" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="FeedrollMotorData_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="7" data-tchmi-left-unit="px" data-tchmi-text="Feedroll Motor Data" data-tchmi-top="7" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "headline-3"
+          ]
+        </script>
+      </div>
+
+
+</div>
+
+    <div data-tchmi-grid-column-index="2" id="TcHmiContainer_MachineSettings_3" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-zindex="1">
+
+
+      <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+        [
+        "background-container"
+        ]
+      </script>
+<div id="Rotor_Drive_TextBox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="228" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="64" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.Rotor_Drive_Pulley%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Rotor_Drive_TextBox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.Rotor_Drive_Pulley%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Rotor_Drive_TextBox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="Rotor_Drive_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Rotor Drive Pulley" data-tchmi-top="208" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="Rotor_Driven_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="173" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="64" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.Rotor_Driven_Pulley%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Rotor_Driven_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.Rotor_Driven_Pulley%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Rotor_Driven_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="Rotor_Driven_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Rotor Driven Pulley" data-tchmi-top="153" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="Rotor_RPM_Limit_TextBox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="118" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="1000" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.Rotor_RPM_Limit%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Rotor_RPM_Limit_TextBox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.Rotor_RPM_Limit%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Rotor_RPM_Limit_TextBox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="Rotor_RPM_Limit_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Rotor RPM Limit" data-tchmi-top="98" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="Rotor_ToothCount_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="63" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="20" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.Rotor_Tooth_Count%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Rotor_ToothCount_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.Rotor_Tooth_Count%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Rotor_ToothCount_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="RotorTooth_Count_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Rotor Tooth Count " data-tchmi-top="43" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="RotorData_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Rotor Data" data-tchmi-top="13" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "headline-3"
+          ]
+        </script>
+      </div>
+
+
+</div>
+
+    <div data-tchmi-grid-column-index="3" id="TcHmiContainer_MachineSettings_4" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-zindex="1">
+
+
+      <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+        [
+        "background-container"
+        ]
+      </script>
+<div id="Feedroll_Drive_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="7" data-tchmi-left-unit="px" data-tchmi-top="173" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="64" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.Feedroll_Drive_Pulley%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Feedroll_Drive_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.Feedroll_Drive_Pulley%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Feedroll_Drive_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="Feedroll_Drive_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Feedroll Drive Pulley" data-tchmi-top="153" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="Feedroll_Driven_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="118" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="64" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.Feedroll_Driven_Pulley%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Feedroll_Driven_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.Feedroll_Driven_Pulley%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Feedroll_Driven_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="Feedroll_Driven_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Feedroll Driven Pulley" data-tchmi-top="98" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="Feedroll_Diameter_Inch_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="63" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="1.625" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="decimal" data-tchmi-text="%s%PLC1.GVL.Feedroll_Diameter_Inch%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Feedroll_Diameter_Inch_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.Feedroll_Diameter_Inch%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Feedroll_Diameter_Inch_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="Feedroll_Diameter_Inch_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Feedroll Diameter (Inch)" data-tchmi-top="43" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="FeedrollData_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Feedroll Data" data-tchmi-top="13" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "headline-3"
+          ]
+        </script>
+      </div>
+
+
+</div>
+
+    <div data-tchmi-grid-column-index="5" id="TcHmiContainer_MachineSettings_5" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-zindex="1">
+
+
+      <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+        [
+        "background-container"
+        ]
+      </script>
+
+    <div id="TcHmiThemeSelect_MachineSettings_Theme" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiThemeSelect" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="16" data-tchmi-left-unit="px" data-tchmi-top="127" data-tchmi-top-unit="px" data-tchmi-width="268" data-tchmi-width-unit="px" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+          {
+          "top": 3,
+          "right": 3,
+          "bottom": 3,
+          "left": 3
+          }
+        </script>
+
+      
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="TcHmiTextblock_MachineSettings_Theme" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="16" data-tchmi-left-unit="px" data-tchmi-text="%l%L_Theme%/l%" data-tchmi-top="91" data-tchmi-top-unit="px" data-tchmi-width="268" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "headline-3"
+          ]
+        </script>
+      </div>
+<div id="TcHmiLocalizationSelect_MachineSettings_Localization" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLocalizationSelect" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-top="52" data-tchmi-top-unit="px" data-tchmi-width="268" data-tchmi-width-unit="px" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-localization-mapping" type="application/json">
+          [
+          {
+          "code": "de",
+          "text": "German"
+          },
+          {
+          "code": "en",
+          "text": "English"
+          }
+          ]
+        </script>
+        <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+          {
+          "top": 3,
+          "right": 3,
+          "bottom": 3,
+          "left": 3
+          }
+        </script>
+
+      
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="TcHmiTextblock_MachineSettings_Localization" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="%l%L_Localization%/l%" data-tchmi-top="16" data-tchmi-top-unit="px" data-tchmi-width="268" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "headline-3"
+          ]
+        </script>
+      </div>
+</div>
+
+    <div data-tchmi-grid-column-index="6" id="TcHmiContainer_MachineSettings_6" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-zindex="1">
+
+
+      <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+        [
+        "background-container"
+        ]
+      </script>
+
+    <div id="Maximum_Pellet_Length_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="251" data-tchmi-top-unit="px" data-tchmi-width="180" data-tchmi-width-unit="px" data-tchmi-placeholder="64" data-tchmi-is-enabled="false" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.Maximum_Pellet_Length%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="Maximum_Pellet_Length_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Maximum Pellet Length (inch)" data-tchmi-top="231" data-tchmi-top-unit="px" data-tchmi-width="180" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="Minimum_Pellet_Length_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="201" data-tchmi-top-unit="px" data-tchmi-width="180" data-tchmi-width-unit="px" data-tchmi-placeholder="0.05" data-tchmi-is-enabled="false" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.Minimum_Pellet_Length%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="Minimum_Pellet_Length_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="181" data-tchmi-top-unit="px" data-tchmi-width="180" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1" data-tchmi-text="Min Pellet Legnth">
+</div>
+<div id="Min_Rotor_Hz_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="218" data-tchmi-left-unit="px" data-tchmi-top="201" data-tchmi-top-unit="px" data-tchmi-width="130" data-tchmi-width-unit="px" data-tchmi-placeholder="12" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.RotorMot_Min_Hz%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Min_Rotor_Hz_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.RotorMot_Min_Hz%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Min_Rotor_Hz_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="Min_Rotor_Hz_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="218" data-tchmi-left-unit="px" data-tchmi-text="Minimum Rotor Motor Hz" data-tchmi-top="181" data-tchmi-top-unit="px" data-tchmi-width="130" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="Min_Feedroll_Hz_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="218" data-tchmi-left-unit="px" data-tchmi-top="61" data-tchmi-top-unit="px" data-tchmi-width="130" data-tchmi-width-unit="px" data-tchmi-placeholder="12" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.FeedrollMot_Min_Hz%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Min_Feedroll_Hz_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.FeedrollMot_Min_Hz%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Min_Feedroll_Hz_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="Min_Feedroll_Hz_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="218" data-tchmi-left-unit="px" data-tchmi-text="Minimum Feedroll Motor Hz" data-tchmi-top="41" data-tchmi-top-unit="px" data-tchmi-width="130" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="Calculations_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Calculations" data-tchmi-top="11" data-tchmi-top-unit="px" data-tchmi-width="180" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "headline-3"
+          ]
+        </script>
+      </div>
+<div id="Minimum_Line_Speed_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Minimum Rated Line Speed (ft/min)" data-tchmi-top="41" data-tchmi-top-unit="px" data-tchmi-width="180" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="Minimum_Line_Speed_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="61" data-tchmi-top-unit="px" data-tchmi-width="180" data-tchmi-width-unit="px" data-tchmi-placeholder="50" data-tchmi-is-enabled="false" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.Minimum_Line_Speed%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="Maximum_Line_Speed_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Maximum Rated Line Speed (ft/min)" data-tchmi-top="96" data-tchmi-top-unit="px" data-tchmi-width="180" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="Maximum_Line_Speed_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="116" data-tchmi-top-unit="px" data-tchmi-width="180" data-tchmi-width-unit="px" data-tchmi-placeholder="180" data-tchmi-is-enabled="false" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-text="%s%PLC1.GVL.Maximum_Line_Speed%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiContainer_MachineSettings_6.onAttached",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%Minimum_Line_Speed_Lbl::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Minimum Rated Line Speed (m/min)"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "value": false
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%Minimum_Line_Speed_Lbl::Text%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "value": "Minimum Rated Line Speed (ft/min)"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": []
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      },
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%Minimum_Pellet_Length_Lbl::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Minimum Pellet Length (mm)"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "value": false
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%Minimum_Pellet_Length_Lbl::Text%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "value": "Minimum Pellet Length (inch)"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": []
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      },
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%Maximum_Line_Speed_Lbl::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Maximum Rated Line Speed (m/min)"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "value": false
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%Maximum_Line_Speed_Lbl::Text%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "value": "Maximum Rated Line Speed (ft/min)"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": []
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      },
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": true
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%Maximum_Pellet_Length_Lbl::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Maximum Pellet Length (mm)"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "symbolExpression": "%s%PLC1.GVL.Metric_Set_Bit%/s%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "value": false
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%Maximum_Pellet_Length_Lbl::Text%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "value": "Maximum Pellet Length (inch)"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": []
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+
+    <div data-tchmi-grid-column-index="7" id="TcHmiContainer_MachineSettings_7" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-zindex="1">
+
+
+      <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+        [
+        "background-container"
+        ]
+      </script>
+
+    <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="ServiceTextBoxInfo" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="93" data-tchmi-height-unit="px" data-tchmi-left="7" data-tchmi-left-unit="px" data-tchmi-text="Maintenance &amp; Operator Training
+Parts@BayPlasticsMachinery.com
+989-671-9630
+www.BayPlasticsMachinery.com" data-tchmi-top="41" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="16" data-tchmi-zindex="1">
+</div>
+<div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="PartsandService_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="28" data-tchmi-height-unit="px" data-tchmi-left="7" data-tchmi-left-unit="px" data-tchmi-text="Pelletizer Parts &amp; Service" data-tchmi-top="8" data-tchmi-top-unit="px" data-tchmi-width="251" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="24" data-tchmi-zindex="1">
+</div>
+<div id="Pellet_Cal_Header_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Pellet Length Calibration" data-tchmi-top="142" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-zindex="1">
+</div>
+<div id="Measured_Pellet_Length_Input_Cal" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="4" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="201" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-zindex="1" data-tchmi-value="%s%PLC1.Pellet_Calibration.Pellet_Length_Measured_Input%/s%">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Measured_Pellet_Length_Input_Cal.onValueChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.Pellet_Calibration.Pellet_Length_Measured_Input%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Measured_Pellet_Length_Input_Cal::Value%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+<div id="Current_Pellet_Setting_Cal_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="%s%PLC1.GVL.Pellet_Length_Inch_Input%/s%" data-tchmi-top="171" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-is-enabled="false" data-tchmi-zindex="1" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-ignore-escape-sequences="false">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="Measured_Pellet_Length_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="175" data-tchmi-left-unit="px" data-tchmi-text="Pellet Length Measured" data-tchmi-top="202" data-tchmi-top-unit="px" data-tchmi-width="169" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-zindex="1">
+</div>
+<div id="Pellet_Length_Setting_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="175" data-tchmi-left-unit="px" data-tchmi-text="Pellet Length Setting" data-tchmi-top="171" data-tchmi-top-unit="px" data-tchmi-width="169" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-zindex="1">
+</div>
+<div id="TcHmiRectangle" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="136" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="142" data-tchmi-top-unit="px" data-tchmi-width="338" data-tchmi-width-unit="px" data-tchmi-zindex="0">
+</div>
+<div id="Pellet_Length_Calibration_Factor" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-top="236" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-is-enabled="false" data-tchmi-zindex="1" data-tchmi-text="%s%PLC1.Pellet_Calibration.Pellet_Length_Temp_Cal_Val%/s%">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="Pellet_Length_Calibration_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="175" data-tchmi-left-unit="px" data-tchmi-text="Pellet Length Calibration Factor" data-tchmi-top="236" data-tchmi-top-unit="px" data-tchmi-width="169" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-zindex="1">
+</div>
+<div id="TcHmiButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="19" data-tchmi-height-unit="px" data-tchmi-left="196" data-tchmi-left-unit="px" data-tchmi-text="Set Calibration Constant" data-tchmi-top="149" data-tchmi-top-unit="px" data-tchmi-width="135" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="10" data-tchmi-state-symbol="%s%PLC1.Pellet_Calibration.SET_CALIBRATON_VALUE%/s%">
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+</div>
+
+
+</div>
+
+    <div data-tchmi-grid-column-index="4" id="TcHmiContainer_MachineSettings_8" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-zindex="1">
+
+
+      <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+        [
+        "background-container"
+        ]
+      </script>
+
+    <div id="WorkOrder_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-top="227" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="Work Order #" data-tchmi-is-enabled="true" data-tchmi-text="%s%PLC1.GVL.Work_Order_Number%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "WorkOrder_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.Work_Order_Number%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%WorkOrder_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="WorkOrder_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-text="Work Order #" data-tchmi-top="207" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="PurchaseOrder_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="174" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="Purchase Order #" data-tchmi-is-enabled="true" data-tchmi-text="%s%PLC1.GVL.Purchase_Order_Number%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "PurchaseOrder_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.Purchase_Order_Number%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%PurchaseOrder_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="PurchaseOrder_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-text="Purchase Order #" data-tchmi-top="152" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="ElectricalBillID_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-top="117" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="Electrical Bill ID" data-tchmi-is-enabled="true" data-tchmi-text="%s%PLC1.GVL.Electrical_Bill_ID%/s%" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "ElectricalBillID_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.Electrical_Bill_ID%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%ElectricalBillID_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="ElectricalBillID_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-text="Electrical Bill ID" data-tchmi-top="97" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="SerialNumber_Textbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-text="%s%PLC1.GVL.Machine_Serial_Number%/s%" data-tchmi-top="62" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="Serial Number" data-tchmi-is-enabled="true" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "SerialNumber_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.Machine_Serial_Number%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%SerialNumber_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="SerialNumber_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-text="Serial Number" data-tchmi-top="42" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
+<div id="MachineIdentity_Lbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-text="Machine Identity" data-tchmi-top="12" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="True" data-tchmi-zindex="1">
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+          [
+          "headline-3"
+          ]
+        </script>
+      </div>
+
+
+</div>
+
+
+    <script data-tchmi-target-attribute="data-tchmi-cell-options" type="application/json">
+      [
+      {
+      "columnIndex": 0,
+      "rowIndex": 0,
+      "padding": {
+      "left": 16,
+      "right": 16,
+      "top": 16,
+      "bottom": 16,
+      "leftUnit": "px",
+      "rightUnit": "px",
+      "topUnit": "px",
+      "bottomUnit": "px"
+      },
+      "backgroundImageWidthUnit": "px",
+      "backgroundImageHeightUnit": "px",
+      "backgroundImageHorizontalAlignment": "Center",
+      "backgroundImageVerticalAlignment": "Center"
+      },
+      {
+      "columnIndex": 1,
+      "rowIndex": 0,
+      "padding": {
+      "left": 16,
+      "right": 16,
+      "top": 16,
+      "bottom": 16,
+      "leftUnit": "px",
+      "rightUnit": "px",
+      "topUnit": "px",
+      "bottomUnit": "px"
+      },
+      "backgroundImageWidthUnit": "px",
+      "backgroundImageHeightUnit": "px",
+      "backgroundImageHorizontalAlignment": "Center",
+      "backgroundImageVerticalAlignment": "Center"
+      },
+      {
+      "columnIndex": 2,
+      "rowIndex": 0,
+      "padding": {
+      "left": 16,
+      "right": 16,
+      "top": 16,
+      "bottom": 16,
+      "leftUnit": "px",
+      "rightUnit": "px",
+      "topUnit": "px",
+      "bottomUnit": "px"
+      },
+      "backgroundImageWidthUnit": "px",
+      "backgroundImageHeightUnit": "px",
+      "backgroundImageHorizontalAlignment": "Center",
+      "backgroundImageVerticalAlignment": "Center"
+      },
+      {
+      "columnIndex": 3,
+      "rowIndex": 0,
+      "padding": {
+      "left": 16,
+      "right": 16,
+      "top": 16,
+      "bottom": 16,
+      "leftUnit": "px",
+      "rightUnit": "px",
+      "topUnit": "px",
+      "bottomUnit": "px"
+      },
+      "backgroundImageWidthUnit": "px",
+      "backgroundImageHeightUnit": "px",
+      "backgroundImageHorizontalAlignment": "Center",
+      "backgroundImageVerticalAlignment": "Center"
+      },
+      {
+      "columnIndex": 4,
+      "rowIndex": 0,
+      "padding": {
+      "left": 16,
+      "right": 16,
+      "top": 16,
+      "bottom": 16,
+      "leftUnit": "px",
+      "rightUnit": "px",
+      "topUnit": "px",
+      "bottomUnit": "px"
+      },
+      "backgroundImageWidthUnit": "px",
+      "backgroundImageHeightUnit": "px",
+      "backgroundImageHorizontalAlignment": "Center",
+      "backgroundImageVerticalAlignment": "Center"
+      },
+      {
+      "columnIndex": 5,
+      "rowIndex": 0,
+      "padding": {
+      "left": 16,
+      "right": 16,
+      "top": 16,
+      "bottom": 16,
+      "leftUnit": "px",
+      "rightUnit": "px",
+      "topUnit": "px",
+      "bottomUnit": "px"
+      },
+      "backgroundImageWidthUnit": "px",
+      "backgroundImageHeightUnit": "px",
+      "backgroundImageHorizontalAlignment": "Center",
+      "backgroundImageVerticalAlignment": "Center"
+      },
+      {
+      "columnIndex": 6,
+      "rowIndex": 0,
+      "padding": {
+      "left": 16,
+      "right": 16,
+      "top": 16,
+      "bottom": 16,
+      "leftUnit": "px",
+      "rightUnit": "px",
+      "topUnit": "px",
+      "bottomUnit": "px"
+      },
+      "backgroundImageWidthUnit": "px",
+      "backgroundImageHeightUnit": "px",
+      "backgroundImageHorizontalAlignment": "Center",
+      "backgroundImageVerticalAlignment": "Center"
+      },
+      {
+      "columnIndex": 7,
+      "rowIndex": 0,
+      "padding": {
+      "left": 16,
+      "right": 16,
+      "top": 16,
+      "bottom": 16,
+      "leftUnit": "px",
+      "rightUnit": "px",
+      "topUnit": "px",
+      "bottomUnit": "px"
+      },
+      "backgroundImageWidthUnit": "px",
+      "backgroundImageHeightUnit": "px",
+      "backgroundImageHorizontalAlignment": "Center",
+      "backgroundImageVerticalAlignment": "Center"
+      }
+      ]
+    </script>
+  </div>
+</div>

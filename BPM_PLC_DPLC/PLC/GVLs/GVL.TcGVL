@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <GVL Name="GVL" Id="{cd219c74-551e-4582-8aa2-c40ff9819c46}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+
+
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////Pelletizer Control I/O /////////////////////
+
+/////////////////Start/Stop
+//Start : BOOL;
+//Stop : BOOL;
+//Running: BOOL;
+/////////////////////////////
+//Not using Start and Stop bits for the Normal DPLC Program, if start and stop buttons were on the screen, we would use them.
+
+/////////////////Feedroll Control
+Feedroll_Set_RPM : REAL;
+FeedRate_Line_Speed : REAL;
+Feedroll_Calculated_RPM : REAL;
+/////////////////////////////
+
+/////////////////Rotor Control
+Rotor_Calculated_RPM : REAL;
+Rotor_RPMLimit_Exceeded : REAL; 
+Rotor_RPM_Minimum : REAL; 
+/////////////////////////////
+
+/////////////////Machine Control
+Speed_Input : REAL;
+FeedrolAnalogInput  AT %I*: INT;	//Analog Input as a percentage of the Analog Input Setting // 0-10V__0-100%
+Pellet_Length_Inch_Input : REAL := 0.125;
+Pellet_Length_Output : REAL;
+Pelletizer_Running :BOOL;
+Rotor_Drive_Fault : BOOL;
+Feedroll_Drive_Fault: BOOL;
+//Safety
+Cover_Open : BOOL;
+Emergency_Stop_Active : BOOL;
+Discharge_Chute_NotPresent : BOOL;
+/////////////////////////////
+
+////////////////Calculated Data 
+Minimum_Pellet_Length : REAL;
+Maximum_Pellet_Length : REAL;
+Minimum_Line_Speed : REAL;
+Maximum_Line_Speed : REAL;
+/////////////////////////////
+END_VAR
+
+
+VAR_GLOBAL PERSISTENT
+///PERSISTENT VARIABLES: retain their value after an uncontrolled termination, a Reset cold or a new download of the PLC project. 
+	Machine_Serial_Number : STRING;
+	Electrical_Bill_ID : STRING;
+	Purchase_Order_Number : STRING;
+	Work_Order_Number : STRING;
+	
+///////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////Pelletizer Setup Data//////////////////////////////////
+
+////////////////Rotor Motor Data
+RotorMot_Rated_RPM : REAL;
+RotorMot_Rated_Hz : REAL;
+RotorMot_Max_Hz : REAL;
+RotorMot_Min_Hz : REAL;
+///////////////////////////////
+
+/////////////////////Rotor Data
+Rotor_Tooth_Count : REAL;
+Rotor_RPM_Limit : REAL;
+Rotor_Drive_Pulley : REAL;
+Rotor_Driven_Pulley : REAL;
+///////////////////////////////
+
+////////////Feedroll Motor Data
+FeedrollMot_Rated_RPM : REAL;
+FeedrollMot_Rated_Hz : REAL;
+FeedrollMot_Max_Hz : REAL;
+FeedrollMot_Min_Hz : REAL;
+//////////////////////////////
+
+/////////////////Feedroll Data
+Feedroll_Diameter_Inch : REAL;
+Feedroll_Drive_Pulley : REAL;
+Feedroll_Driven_Pulley : REAL;
+Feedroll_Pressure : REAL;
+/////////////////////////////
+
+////////////////////////Misc
+Metric_Set_Bit : BOOL;
+//////////////////////////////
+
+//////////////////////////Calibration
+Pellet_Length_Calibration_Value : REAL := 1;
+//////////////////////////////////////
+END_VAR
+]]></Declaration>
+  </GVL>
+</TcPlcObject>

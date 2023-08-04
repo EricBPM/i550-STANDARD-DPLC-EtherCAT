@@ -111,26 +111,7 @@
 </script>
 
 
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "Rotor_Mot_Rated_RPM_Textbox.onTextChanged",
-    "actions": [
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GVL.RotorMot_Rated_RPM%/s%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/String",
-          "symbolExpression": "%ctrl%Rotor_Mot_Rated_RPM_Textbox::Text%/ctrl%"
-        },
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
+
 
 <script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
 [
@@ -163,6 +144,27 @@
     "accessright": "observe",
     "group": "Operator",
     "permission": "Allow"
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Rotor_Mot_Rated_RPM_Textbox.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.RotorMot_Rated_RPM%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Rotor_Mot_Rated_RPM_Textbox::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
   }
 ]
 </script>
@@ -316,6 +318,77 @@
       </div>
 
 
+<div id="Rotor_Measured_60_Hz_RPM" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-top="225" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-placeholder="85" data-tchmi-is-enabled="true" data-tchmi-system-keyboard-input-mode="numeric" data-tchmi-zindex="1" data-tchmi-text="%s%PLC1.GVL.RotorMot_Measured_60Hz_RPM%/s%">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Operator",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Maintenance",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Operator",
+    "permission": "Allow"
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Rotor_Measured_60_Hz_RPM.onTextChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.GVL.RotorMot_Measured_60Hz_RPM%/s%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%Rotor_Measured_60_Hz_RPM::Text%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="RotorMeasured60HzLbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-text="Rotor RPM Measured at 60 Hz" data-tchmi-top="205" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+</div>
 </div>
 
     <div data-tchmi-grid-column-index="1" id="TcHmiContainer_MachineSettings_2" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-zindex="1">

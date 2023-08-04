@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.42">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.44">
 	<ImageDatas>
 		<ImageData Id="1000">424de6000000000000007600000028000000100000000e000000010004000000000070000000000000000000000000000000000000000000000000008000008000000080800080000000800080008080000080808000c0c0c0000000ff0000ff000000ffff00ff000000ff00ff00ffff0000ffffff00fffffffffffffffffccccccffffffffffcfffecefffffffffcfffecef80008fffcfffecef00000fffcfffecef00900fffcfffecef00000fffcfffecef80008fffccccccefffffffffcfffecefffffffffccffccefffffffffecccceeffffffffffeeeeefffffffffffffffffffffffff</ImageData>
 	</ImageDatas>
@@ -25,7 +25,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{C2463DFE-8D25-458F-B39B-892E853BBF0C}" Name="PLC" PrjFilePath="PLC\PLC.plcproj" TmcFilePath="PLC\PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC\PLC.tmc" TmcHash="{31AE5E44-DD9F-FA0A-B5E1-FEFCB9F2550F}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC\PLC.tmc" TmcHash="{D3F76006-CD1A-F474-431B-6106152D193A}">
 					<Name>PLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -41,17 +41,12 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>GVL.FeedrolAnalogInput</Name>
-							<Comment><![CDATA[Analog Input as a percentage of the Analog Input Setting // 0-10V__0-100%]]></Comment>
-							<Type>INT</Type>
+							<Name>Drive_Communication.Feedroll_Drive_Status</Name>
+							<Type>UINT</Type>
 						</Var>
 						<Var>
 							<Name>Drive_Communication.Feedroll_Drive_Running</Name>
 							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>Drive_Communication.Feedroll_Drive_Status</Name>
-							<Type>UINT</Type>
 						</Var>
 						<Var>
 							<Name>Drive_Communication.Rotor_Drive_Message</Name>
@@ -59,12 +54,25 @@
 							<Type>USINT</Type>
 						</Var>
 						<Var>
+							<Name>Drive_Communication.Rotor_Drive_Status</Name>
+							<Type>UINT</Type>
+						</Var>
+						<Var>
 							<Name>Drive_Communication.Rotor_Drive_Running</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>Drive_Communication.Rotor_Drive_Status</Name>
-							<Type>UINT</Type>
+							<Name>GVL.FeedrolAnalogInput</Name>
+							<Comment><![CDATA[Analog Input as a percentage of the Analog Input Setting // 0-10V__0-100%]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL.Actual_FeedrollMot_Speed_RPM</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL.Actual_RotorMot_Speed_RPM</Name>
+							<Type>INT</Type>
 						</Var>
 					</Vars>
 					<Vars VarGrpType="2" AreaNo="1">
@@ -105,8 +113,8 @@
 			</Project>
 		</Plc>
 		<Io>
-			<Device Id="1" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="169.254.75.91.1.1" RemoteName="DualDrive (EtherCAT)" InfoImageId="2">
-				<Name>DualDrive (EtherCAT)</Name>
+			<Device Id="1" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="169.254.75.91.2.1" RemoteName="Device 1 (EtherCAT)" InfoImageId="2">
+				<Name>Device 1 (EtherCAT)</Name>
 				<AddressInfo>
 					<Pnp>
 						<DeviceDesc>EtherCAT (TwinCAT-Intel PCI Ethernet Adapter (Gigab</DeviceDesc>
@@ -118,7 +126,7 @@
 					<Name>Image</Name>
 				</Image>
 				<Box Id="1" BoxType="9099" BoxFlags="#x00000020">
-					<Name>Feedroll Drive</Name>
+					<Name>Feedroll Drive(Inverter i550 Cabinet)</Name>
 					<ImageId>1000</ImageId>
 					<EtherCAT SlaveType="2" PdiType="#x3080" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="13" EoeType="1" FoeType="1" VendorId="#x0000003b" ProductCode="#x69055000" RevisionNo="#x00070000" InfoDataAddr="true" EnableWdDivider0400="true" EnableWdTime0420="true" TimeoutStateChange2="3000" TimeoutStateChange3="3000" TimeoutStateChange4="3000" TimeoutMailbox2="2000" CheckRevisionNoType="2" PortPhys="17" IdentificationAdo="308" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="i550 Cabinet V07.00.xx" Desc="Inverter i550 Cabinet" PortABoxInfo="#x00ffffff">
 						<SyncMan>001080002600010001000000800000018000001026010000</SyncMan>
@@ -130,7 +138,7 @@
 						<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
 						<SwitchPortData>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</SwitchPortData>
 						<BootStrapData>0010000100110001</BootStrapData>
-						<Pdo Name="TPDO (A) Velocity" Index="#x1a03" Flags="#x0010" SyncMan="3">
+						<Pdo Name="TPDO (A) Velocity" Index="#x1a03" Flags="#x0000" SyncMan="3">
 							<Entry Name="CiA status word" Index="#x6041">
 								<Type>UINT</Type>
 							</Entry>
@@ -142,14 +150,14 @@
 							</Entry>
 						</Pdo>
 						<Pdo Name="TPDO (A) user config" Index="#x1a05" Flags="#x0000" SyncMan="3">
-							<Entry Name="FeedrollAnalogInput1" Index="#x2da4" Sub="#x01">
-								<Type>INT</Type>
-							</Entry>
 							<Entry Name="NetWordOUT1" Index="#x400a" Sub="#x01">
 								<Type>UINT</Type>
 							</Entry>
+							<Entry Name="feedrollanaloginput1" Index="#x2da4" Sub="#x01">
+								<Type>INT</Type>
+							</Entry>
 						</Pdo>
-						<Pdo Name="RPDO (A) Velocity" Index="#x1603" InOut="1" Flags="#x0010" SyncMan="2">
+						<Pdo Name="RPDO (A) Velocity" Index="#x1603" InOut="1" Flags="#x0000" SyncMan="2">
 							<Entry Name="CiA control word" Index="#x6040">
 								<Type>UINT</Type>
 							</Entry>
@@ -165,7 +173,7 @@
 					</EtherCAT>
 				</Box>
 				<Box Id="2" BoxType="9099" BoxFlags="#x00000020">
-					<Name>Rotor Drive</Name>
+					<Name>Rotor Drive(Inverter i550 Cabinet)</Name>
 					<ImageId>1000</ImageId>
 					<EtherCAT SlaveType="2" PdiType="#x3080" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="13" EoeType="1" FoeType="1" VendorId="#x0000003b" ProductCode="#x69055000" RevisionNo="#x00060004" InfoDataAddr="true" EnableWdDivider0400="true" EnableWdTime0420="true" TimeoutStateChange2="3000" TimeoutStateChange3="3000" TimeoutStateChange4="3000" TimeoutMailbox2="2000" CheckRevisionNoType="2" PortPhys="17" IdentificationAdo="308" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="i550 Cabinet V06.04.xx" Desc="Inverter i550 Cabinet" PortABoxInfo="#x01000001">
 						<SyncMan>001080002600010001000000800000018000001026010000</SyncMan>
@@ -218,14 +226,16 @@
 	<Mappings>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
 		<OwnerA Name="TIPC^PLC^PLC Instance">
-			<OwnerB Name="TIID^DualDrive (EtherCAT)^Feedroll Drive">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Feedroll Drive(Inverter i550 Cabinet)">
 				<Link VarA="PlcTask Inputs^Drive_Communication.Feedroll_Drive_Running" VarB="TPDO (A) user config^NetWordOUT1" Size="1" OffsB="6"/>
-				<Link VarA="PlcTask Inputs^GVL.FeedrolAnalogInput" VarB="TPDO (A) user config^FeedrollAnalogInput1"/>
+				<Link VarA="PlcTask Inputs^GVL.Actual_FeedrollMot_Speed_RPM" VarB="TPDO (A) Velocity^Actual speed"/>
+				<Link VarA="PlcTask Inputs^GVL.FeedrolAnalogInput" VarB="TPDO (A) user config^feedrollanaloginput1"/>
 				<Link VarA="PlcTask Outputs^Pelletizer_Speed_Control.FeedrollMot_Speed_Hz" VarB="RPDO (A) user config^Velocity mode setpoint"/>
 			</OwnerB>
-			<OwnerB Name="TIID^DualDrive (EtherCAT)^Rotor Drive">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Rotor Drive(Inverter i550 Cabinet)">
 				<Link VarA="PlcTask Inputs^Drive_Communication.Rotor_Active_Torque" VarB="TPDO (A) user config^Actual torque"/>
 				<Link VarA="PlcTask Inputs^Drive_Communication.Rotor_Drive_Running" VarB="TPDO (A) user config^NetWordOUT1" Size="1" OffsB="6"/>
+				<Link VarA="PlcTask Inputs^GVL.Actual_RotorMot_Speed_RPM" VarB="TPDO (A) Velocity^Actual speed"/>
 				<Link VarA="PlcTask Outputs^Pelletizer_Speed_Control.RotorMot_Speed_Hz" VarB="RPDO (A) user config^Velocity mode setpoint"/>
 			</OwnerB>
 		</OwnerA>

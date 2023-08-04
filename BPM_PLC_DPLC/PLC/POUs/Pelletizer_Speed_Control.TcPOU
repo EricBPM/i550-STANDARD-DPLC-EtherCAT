@@ -21,11 +21,11 @@ IF GVL.Pelletizer_Running OR FirstScan THEN
 DPLC(
 	Pellet_Length_Inch_Input := Imperial_Metric_Switching.Pellet_Length_Imperial_Input, 
 	Speed_Input := 	TempSpeed, 
-	RotorMot_Rated_RPM := GVL.RotorMot_Rated_RPM, 
+	RotorMot_Rated_RPM := GVL.RotorMot_Measured_60Hz_RPM, 
 	RotorMot_Rated_Hz := GVL.RotorMot_Rated_Hz, 
 	RotorMot_Max_Hz := GVL.RotorMot_Max_Hz,
 	RotorMot_Min_Hz := GVL.RotorMot_Min_Hz,
-	Rotor_Drive_Pulley := GVL.Rotor_Drive_Pulley, 
+	Rotor_Drive_Pulley := GVL.Rotor_Drive_Pulley,
 	Rotor_Driven_Pulley := GVL.Rotor_Driven_Pulley, 
 	Rotor_Tooth_Count := GVL.Rotor_Tooth_Count, 
 	Rotor_RPM_Limit := GVL.Rotor_RPM_Limit,
@@ -33,6 +33,7 @@ DPLC(
 	FeedrollMot_Rated_Hz := GVL.FeedrollMot_Rated_Hz, 
 	FeedrollMot_Max_Hz := GVL.FeedrollMot_Max_Hz,
 	FeedrollMot_Min_Hz := GVL.FeedrollMot_Min_Hz,
+	Actual_FeedrollMot_Speed_RPM := GVL.Actual_FeedrollMot_Speed_RPM,
 	Feedroll_Drive_Pulley := GVL.Feedroll_Drive_Pulley, 
 	Feedroll_Driven_Pulley := GVL.Feedroll_Driven_Pulley, 
 	Feedroll_Diameter_Inch := GVL.Feedroll_Diameter_Inch, 
@@ -62,11 +63,12 @@ FirstScan := FALSE;]]></ST>
       <LineId Id="168" Count="0" />
       <LineId Id="143" Count="0" />
       <LineId Id="34" Count="0" />
-      <LineId Id="153" Count="0" />
+      <LineId Id="181" Count="0" />
       <LineId Id="70" Count="5" />
       <LineId Id="94" Count="0" />
       <LineId Id="76" Count="6" />
       <LineId Id="91" Count="0" />
+      <LineId Id="180" Count="0" />
       <LineId Id="83" Count="2" />
       <LineId Id="134" Count="0" />
       <LineId Id="152" Count="0" />

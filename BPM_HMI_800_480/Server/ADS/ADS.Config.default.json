@@ -24,7 +24,7 @@
         },
         "TcSysService": {
             "ENABLED": true,
-            "NETID": "10.0.1.31.1.1",
+            "NETID": "169.254.75.91.1.1",
             "PORT": 10000,
             "READ_ONLY": false,
             "SYMBOLS": {},

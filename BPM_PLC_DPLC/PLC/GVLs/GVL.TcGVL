@@ -19,12 +19,14 @@ VAR_GLOBAL
 Feedroll_Set_RPM : REAL;
 FeedRate_Line_Speed : REAL;
 Feedroll_Calculated_RPM : REAL;
+Actual_FeedrollMot_Speed_RPM AT %I* : INT;
 /////////////////////////////
 
 /////////////////Rotor Control
 Rotor_Calculated_RPM : REAL;
 Rotor_RPMLimit_Exceeded : REAL; 
-Rotor_RPM_Minimum : REAL; 
+Rotor_RPM_Minimum : REAL;
+Actual_RotorMot_Speed_RPM AT %I* : INT;
 /////////////////////////////
 
 /////////////////Machine Control
@@ -61,10 +63,11 @@ VAR_GLOBAL PERSISTENT
 ////////////////////////////////Pelletizer Setup Data//////////////////////////////////
 
 ////////////////Rotor Motor Data
-RotorMot_Rated_RPM : REAL;
 RotorMot_Rated_Hz : REAL;
+RotorMot_Rated_RPM : REAL;
 RotorMot_Max_Hz : REAL;
 RotorMot_Min_Hz : REAL;
+RotorMot_Measured_60Hz_RPM : REAL;
 ///////////////////////////////
 
 /////////////////////Rotor Data

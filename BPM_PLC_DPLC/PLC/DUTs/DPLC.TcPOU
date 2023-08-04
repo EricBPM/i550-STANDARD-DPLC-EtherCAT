@@ -20,6 +20,7 @@ VAR_INPUT
 	FeedrollMot_Rated_Hz: REAL;
 	FeedrollMot_Max_Hz : REAL;
 	FeedrollMot_Min_Hz : REAL;
+	Actual_FeedrollMot_Speed_RPM : INT;
 
 	Feedroll_Drive_Pulley: REAL;
 	Feedroll_Driven_Pulley: REAL;
@@ -31,17 +32,20 @@ VAR_INPUT
 END_VAR
 
 VAR
-	Feedroll_Motor_Speed_Hz : REAL;
-	Rotor_Motor_Speed_Hz : REAL;
+	FeedrollMot_Speed_Hz : REAL;
+	FeedrollMot_Speed_RPM : REAL;
+	FeedrollMot_RPM_Per_Hz : REAL;
+
+	Feedroll_Pulley_Ratio: REAL;
 	Feedroll_Speed_RPM: REAL;
 	Feedroll_Circumference_Inch :REAL;
-	Feedroll_Pulley_Ratio: REAL;
-	FeedrollMot_RPM_Per_Hz : REAL;
-	
+
+	RotorMot_Speed_Hz : REAL;
 	RotorMot_Speed_RPM : REAL;
+	RotorMot_RPM_Per_Hz : REAL;
+
 	Rotor_Pulley_Ratio: REAL;
 	Cuts_Per_Minute: REAL;
-	RotorMot_RPM_Per_Hz : REAL;
 	
 	Min_Cuts_Per_Minute : REAL;
 	Max_Cuts_Per_Minute : REAL;
@@ -52,18 +56,18 @@ END_VAR
 VAR_OUTPUT
 	Pellet_Length_Output :REAL; 		//this is the resulting pellet length for display. Converted to Metric or Imperial depending on the Metric Set Bit.
 
-	Feedroll_Motor_Speed_Hz_int : INT;
-	Rotor_Motor_Speed_Hz_int : INT;
+	Feedroll_Motor_Speed_Hz_int : INT;	//this variable is written to the drive. Ms: Velocity Mode (-2) uses Hz to control speed.
+	Rotor_Motor_Speed_Hz_int : INT;  	//this variable is written to the drive. Ms: Velocity Mode (-2) uses Hz to control speed.
 	
 	Rotor_Speed_RPM: REAL;
-	FeedRate_Feet_Per_Minute: REAL;
+	
+	FeedRate_Feet_Per_Minute: REAL;		//This is the displayed Ft/min on the HMI
 	
 	Rotor_RPM_Minimum : REAL; // info for Gauge on HMI
-
-	Maximum_Line_Speed : REAL;
-	Minimum_Line_Speed: REAL;
-	Maximum_Pellet_Length : REAL;
-	Minimum_Pellet_Length : REAL;
+	Maximum_Line_Speed : REAL;	//info for machine limits
+	Minimum_Line_Speed: REAL;	//info for machine limits
+	Maximum_Pellet_Length : REAL;	//info for machine limits
+	Minimum_Pellet_Length : REAL;	//info for machine limits
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[////////////////////////////Notes and Information/////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -73,7 +77,10 @@ END_VAR]]></Declaration>
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //If the Metric Bit is set, we convert the pellet length in mm to inches for input. We also convert to output Feedroll speed to meters per minute
 
-
+//if direction is backwards, make it a postive number.
+IF Actual_feedrollMot_Speed_RPM < 0 THEN
+	Actual_feedrollMot_Speed_RPM := Actual_feedrollMot_Speed_RPM * -1;
+END_IF
 	
 
 
@@ -82,26 +89,28 @@ FeedrollMot_RPM_Per_Hz := FeedrollMot_Rated_RPM / FeedrollMot_Rated_Hz;
 Feedroll_Pulley_Ratio := Feedroll_Drive_Pulley / Feedroll_Driven_Pulley;
 Feedroll_Circumference_Inch := Feedroll_Diameter_Inch *  3.14159;
 
-RotorMot_RPM_Per_Hz := RotorMot_Rated_RPM / RotorMot_Rated_Hz;
+RotorMot_RPM_Per_Hz := RotorMot_Rated_RPM / RotorMot_Rated_Hz;	
 Rotor_Pulley_Ratio := Rotor_Drive_Pulley / Rotor_Driven_pulley;
 
+
 /////////////////////////////////////Feedroll Calculations
-Feedroll_Motor_Speed_Hz := FeedrollMot_Max_Hz * Speed_Input;		//Sets the Speed. This variable must be a percentage. 
-Feedroll_Speed_RPM := Feedroll_Motor_Speed_Hz * FeedrollMot_RPM_Per_Hz;
-Feedroll_Speed_RPM := Feedroll_Speed_RPM * Feedroll_Pulley_Ratio;
+FeedrollMot_Speed_Hz := FeedrollMot_Max_Hz * Speed_Input;
+FeedrollMot_Speed_RPM := INT_TO_REAL(Actual_FeedrollMot_Speed_RPM);	// Read the Feedroll RPM Back and do calculation on the actual.
+Feedroll_Speed_RPM := FeedrollMot_Speed_RPM * Feedroll_Pulley_Ratio;
 FeedRate_Inches_Per_Minute := Feedroll_Speed_RPM * Feedroll_Circumference_Inch;
 FeedRate_Feet_Per_Minute := FeedRate_Inches_Per_Minute / 12 ;
 
 
 /////////////////////////////////////Rotor Calculations
 Cuts_Per_Minute := FeedRate_Inches_Per_Minute / (Pellet_Length_Inch_Input * GVL.Pellet_Length_Calibration_Value);
-Rotor_Speed_RPM := Cuts_Per_Minute / Rotor_Tooth_Count;
+Rotor_Speed_RPM := Cuts_Per_Minute / Rotor_Tooth_Count;	//the ROTOR needs to go this many RPM to achieve the pellet length
 RotorMot_Speed_RPM := Rotor_Speed_RPM / Rotor_Pulley_Ratio;
-Rotor_Motor_Speed_Hz := RotorMot_Speed_RPM / Rotormot_RPM_Per_Hz;
+RotorMot_Speed_Hz := RotorMot_Speed_RPM / RotorMot_RPM_Per_Hz;
+
 
 ////////////////////////////////////Set and Convert Speeds to send to Drive
-Feedroll_Motor_Speed_Hz_int := REAL_TO_INT(Feedroll_Motor_Speed_Hz * 10);
-Rotor_Motor_Speed_Hz_int := REAL_TO_INT(Rotor_Motor_Speed_Hz * 10);
+Feedroll_Motor_Speed_Hz_int := REAL_TO_INT(FeedrollMot_Speed_Hz * 10);
+Rotor_Motor_Speed_Hz_int := REAL_TO_INT(RotorMot_Speed_Hz * 10);
 
 
 ///////////////////////////////////Limits
@@ -117,7 +126,6 @@ Maximum_Pellet_Length := (Maximum_Line_Speed * 12) / Min_Cuts_Per_Minute;
 Minimum_Pellet_Length := (Minimum_Line_Speed * 12) / Max_Cuts_Per_Minute;
 
 
-
 IF Metric_Set_Bit THEN
 	//Convert feedroll speed to meters per min for display.
 	Feedrate_Feet_Per_Minute := Feedrate_Feet_Per_Minute * 0.3048;
@@ -127,54 +135,11 @@ IF Metric_Set_Bit THEN
 	//Convert min and max pellet length to mm so the input box does not error.
 	Maximum_Pellet_Length := Maximum_Pellet_Length * 25.4;
 	Minimum_Pellet_Length := Minimum_Pellet_Length * 25.4;
-END_IF
-]]></ST>
+END_IF]]></ST>
     </Implementation>
     <LineIds Name="DPLC">
-      <LineId Id="141" Count="4" />
-      <LineId Id="317" Count="0" />
-      <LineId Id="308" Count="0" />
-      <LineId Id="400" Count="0" />
-      <LineId Id="392" Count="0" />
-      <LineId Id="164" Count="0" />
-      <LineId Id="163" Count="0" />
-      <LineId Id="99" Count="0" />
-      <LineId Id="132" Count="1" />
-      <LineId Id="136" Count="0" />
-      <LineId Id="161" Count="0" />
-      <LineId Id="160" Count="0" />
-      <LineId Id="134" Count="0" />
-      <LineId Id="167" Count="0" />
-      <LineId Id="131" Count="0" />
-      <LineId Id="115" Count="0" />
-      <LineId Id="119" Count="0" />
-      <LineId Id="135" Count="0" />
-      <LineId Id="118" Count="0" />
-      <LineId Id="137" Count="0" />
-      <LineId Id="146" Count="0" />
-      <LineId Id="138" Count="0" />
-      <LineId Id="122" Count="1" />
-      <LineId Id="121" Count="0" />
-      <LineId Id="147" Count="0" />
-      <LineId Id="110" Count="0" />
-      <LineId Id="169" Count="1" />
-      <LineId Id="295" Count="0" />
-      <LineId Id="300" Count="0" />
-      <LineId Id="314" Count="0" />
-      <LineId Id="171" Count="1" />
-      <LineId Id="174" Count="0" />
-      <LineId Id="176" Count="0" />
-      <LineId Id="237" Count="1" />
-      <LineId Id="229" Count="0" />
-      <LineId Id="223" Count="0" />
-      <LineId Id="234" Count="0" />
-      <LineId Id="233" Count="0" />
-      <LineId Id="221" Count="0" />
-      <LineId Id="224" Count="0" />
-      <LineId Id="321" Count="1" />
-      <LineId Id="175" Count="0" />
-      <LineId Id="402" Count="9" />
-      <LineId Id="173" Count="0" />
+      <LineId Id="1177" Count="54" />
+      <LineId Id="1233" Count="10" />
     </LineIds>
   </POU>
 </TcPlcObject>

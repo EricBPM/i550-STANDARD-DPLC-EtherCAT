@@ -2777,16 +2777,6 @@
             },
             "USEMAPPING": true
         },
-        "PLC1.GVL.Pellet_Length_Inch": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL::Pellet_Length_Inch",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/REAL"
-            },
-            "USEMAPPING": true
-        },
         "PLC1.GVL.Pellet_Length_Inch_Input": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -2827,16 +2817,6 @@
             },
             "USEMAPPING": true
         },
-        "PLC1.GVL.RotorMot_Measured_60Hz_RPM": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL::RotorMot_Measured_60Hz_RPM",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/REAL"
-            },
-            "USEMAPPING": true
-        },
         "PLC1.GVL.RotorMot_Min_Hz": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -2852,33 +2832,6 @@
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL::RotorMot_Rated_Hz",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/REAL"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL.RotorMot_Rated_RPM": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL::RotorMot_Rated_RPM",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/REAL"
-                    },
-                    {
-                        "comment": "////////////////////////////////////////////////////////////////////////////////////\r\n/////////////////////////////Pelletizer Setup Data//////////////////////////////////\r\n/////////////Rotor Motor Data"
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL.RotorMot_TopEnd_RPM": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL::RotorMot_TopEnd_RPM",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/REAL"
             },
@@ -2968,16 +2921,6 @@
             },
             "USEMAPPING": true
         },
-        "PLC1.Hour_Meter.TotalHours": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::Hour_Meter::TotalHours",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/DINT"
-            },
-            "USEMAPPING": true
-        },
         "PLC1.Imperial_Metric_Switching.Pellet_Length_Displayed": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -3035,63 +2978,6 @@
             "MAPPING": "PLC1::Pellet_Calibration::SET_CALIBRATON_VALUE",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BOOL"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.Pelletizer_Speed_Control.FeedrolAnalogInTest": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::Pelletizer_Speed_Control::FeedrolAnalogInTest",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/INT"
-                    },
-                    {
-                        "attributes": {
-                            "TcAddressType": "Input"
-                        }
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.Pelletizer_Speed_Control.FeedrollSpeedTest": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::Pelletizer_Speed_Control::FeedrollSpeedTest",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/INT"
-                    },
-                    {
-                        "attributes": {
-                            "TcAddressType": "Output"
-                        }
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.Pelletizer_Speed_Control.RotorActualTorque": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::Pelletizer_Speed_Control::RotorActualTorque",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/INT"
-                    },
-                    {
-                        "attributes": {
-                            "TcAddressType": "Input"
-                        }
-                    }
-                ]
             },
             "USEMAPPING": true
         },

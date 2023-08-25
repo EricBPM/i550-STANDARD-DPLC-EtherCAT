@@ -387,7 +387,7 @@
 ]
 </script>
 </div>
-<div id="RotorMeasured60HzLbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-text="Rotor RPM Measured at 60 Hz" data-tchmi-top="205" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
+<div id="RotorMeasured60HzLbl" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="11" data-tchmi-left-unit="px" data-tchmi-text="Rotor Motor RPM Measured at 60 Hz" data-tchmi-top="205" data-tchmi-top-unit="px" data-tchmi-width="289" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="1">
 </div>
 </div>
 

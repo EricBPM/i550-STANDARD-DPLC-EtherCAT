@@ -32,7 +32,6 @@ Actual_RotorMot_Speed_RPM AT %I* : INT;
 /////////////////Machine Control
 Speed_Input : REAL;
 FeedrolAnalogInput  AT %I*: INT;	//Analog Input as a percentage of the Analog Input Setting // 0-10V__0-100%
-Pellet_Length_Inch_Input : REAL := 0.125;
 Pellet_Length_Output : REAL;
 Pelletizer_Running :BOOL;
 Rotor_Drive_Fault : BOOL;
@@ -93,10 +92,15 @@ Feedroll_Pressure : REAL;
 
 ////////////////////////Misc
 Metric_Set_Bit : BOOL;
+Preset1 : REAL := 0.125;
+Preset2 : REAL := 0.118;
+Preset3 : REAL := 0.100;
+Preset4 : REAL := 0.088;
 //////////////////////////////
 
 //////////////////////////Calibration
 Pellet_Length_Calibration_Value : REAL := 1;
+Pellet_Length_Inch_Input : REAL;
 //////////////////////////////////////
 END_VAR
 ]]></Declaration>

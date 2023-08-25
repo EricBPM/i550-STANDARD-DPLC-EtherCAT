@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.44">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.42">
 	<ImageDatas>
 		<ImageData Id="1000">424de6000000000000007600000028000000100000000e000000010004000000000070000000000000000000000000000000000000000000000000008000008000000080800080000000800080008080000080808000c0c0c0000000ff0000ff000000ffff00ff000000ff00ff00ffff0000ffffff00fffffffffffffffffccccccffffffffffcfffecefffffffffcfffecef80008fffcfffecef00000fffcfffecef00900fffcfffecef00000fffcfffecef80008fffccccccefffffffffcfffecefffffffffccffccefffffffffecccceeffffffffffeeeeefffffffffffffffffffffffff</ImageData>
 	</ImageDatas>
-	<Project ProjectGUID="{3124E0AA-9BB0-4D73-B39B-C2A7FA057F7D}" TargetNetId="169.254.75.91.1.1" Target64Bit="true" ShowHideConfigurations="#x3c7">
+	<Project ProjectGUID="{3124E0AA-9BB0-4D73-B39B-C2A7FA057F7D}" TargetNetId="10.0.1.31.1.1" Target64Bit="true" ShowHideConfigurations="#x3c7">
 		<System>
 			<Settings MaxCpus="4">
 				<Cpu/>
@@ -14,18 +14,24 @@
 			</Settings>
 			<Licenses>
 				<Target>
+					<ManualSelect>{F1CFF3CF-B042-45EE-A380-4FB3270F0BA5}</ManualSelect>
+					<ManualSelect>{CB3D4492-5E9E-43BC-AB3B-27CF3896EEC2}</ManualSelect>
 					<ManualSelect>{D58728E0-7762-4145-8A93-80D55E0453A6}</ManualSelect>
+					<ManualSelect>{2752D285-16AD-4E89-AE6C-80E72784D264}</ManualSelect>
 				</Target>
 			</Licenses>
 			<Tasks>
 				<Task Id="3" Priority="4" CycleTime="30000" AmsPort="350" DisableFpExceptions="true" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
+				<Task Id="4" Priority="30" CycleTime="2000000" AmsPort="351" DisableFpExceptions="true" AdtTasks="true">
+					<Name>VISU_TASK</Name>
+				</Task>
 			</Tasks>
 		</System>
 		<Plc>
 			<Project GUID="{C2463DFE-8D25-458F-B39B-892E853BBF0C}" Name="PLC" PrjFilePath="PLC\PLC.plcproj" TmcFilePath="PLC\PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC\PLC.tmc" TmcHash="{4B427604-B2A5-38ED-D44F-741CFA02EDC3}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC\PLC.tmc" TmcHash="{78738E15-AA09-8226-96F9-331FB7338E63}">
 					<Name>PLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -62,16 +68,16 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL.FeedrolAnalogInput</Name>
-							<Comment><![CDATA[Analog Input as a percentage of the Analog Input Setting // 0-10V__0-100%]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
 							<Name>GVL.Actual_FeedrollMot_Speed_RPM</Name>
 							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>GVL.Actual_RotorMot_Speed_RPM</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL.FeedrolAnalogInput</Name>
+							<Comment><![CDATA[Analog Input as a percentage of the Analog Input Setting // 0-10V__0-100%]]></Comment>
 							<Type>INT</Type>
 						</Var>
 					</Vars>
@@ -105,15 +111,25 @@
 							<Priority>4</Priority>
 							<CycleTime>3000000</CycleTime>
 						</Context>
+						<Context>
+							<Id NeedCalleeCall="true">1</Id>
+							<Name>VISU_TASK</Name>
+							<ManualConfig>
+								<OTCID>#x02010040</OTCID>
+							</ManualConfig>
+							<Priority>30</Priority>
+							<CycleTime>200000000</CycleTime>
+						</Context>
 					</Contexts>
 					<TaskPouOids>
 						<TaskPouOid Prio="4" OTCID="#x08502001"/>
+						<TaskPouOid Prio="30" OTCID="#x08502002"/>
 					</TaskPouOids>
 				</Instance>
 			</Project>
 		</Plc>
 		<Io>
-			<Device Id="1" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="169.254.75.91.2.1" RemoteName="Device 1 (EtherCAT)" InfoImageId="2">
+			<Device Id="1" Disabled="true" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="10.0.1.31.2.1" RemoteName="Device 1 (EtherCAT)" InfoImageId="2">
 				<Name>Device 1 (EtherCAT)</Name>
 				<AddressInfo>
 					<Pnp>
@@ -125,7 +141,7 @@
 				<Image Id="1" AddrType="9" ImageType="3">
 					<Name>Image</Name>
 				</Image>
-				<Box Id="1" BoxType="9099" BoxFlags="#x00000020">
+				<Box Id="1" Disabled="true" BoxType="9099" BoxFlags="#x00000020">
 					<Name>Feedroll Drive(Inverter i550 Cabinet)</Name>
 					<ImageId>1000</ImageId>
 					<EtherCAT SlaveType="2" PdiType="#x3080" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="13" EoeType="1" FoeType="1" VendorId="#x0000003b" ProductCode="#x69055000" RevisionNo="#x00070000" InfoDataAddr="true" EnableWdDivider0400="true" EnableWdTime0420="true" TimeoutStateChange2="3000" TimeoutStateChange3="3000" TimeoutStateChange4="3000" TimeoutMailbox2="2000" CheckRevisionNoType="2" PortPhys="17" IdentificationAdo="308" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="i550 Cabinet V07.00.xx" Desc="Inverter i550 Cabinet" PortABoxInfo="#x00ffffff">
@@ -172,10 +188,10 @@
 						</Pdo>
 					</EtherCAT>
 				</Box>
-				<Box Id="2" BoxType="9099" BoxFlags="#x00000020">
+				<Box Id="2" Disabled="true" BoxType="9099" BoxFlags="#x00000020">
 					<Name>Rotor Drive(Inverter i550 Cabinet)</Name>
 					<ImageId>1000</ImageId>
-					<EtherCAT SlaveType="2" PdiType="#x3080" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="13" EoeType="1" FoeType="1" VendorId="#x0000003b" ProductCode="#x69055000" RevisionNo="#x00060004" InfoDataAddr="true" EnableWdDivider0400="true" EnableWdTime0420="true" TimeoutStateChange2="3000" TimeoutStateChange3="3000" TimeoutStateChange4="3000" TimeoutMailbox2="2000" CheckRevisionNoType="2" PortPhys="17" IdentificationAdo="308" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="i550 Cabinet V06.04.xx" Desc="Inverter i550 Cabinet" PortABoxInfo="#x01000001">
+					<EtherCAT SlaveType="2" PdiType="#x3080" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="13" EoeType="1" FoeType="1" VendorId="#x0000003b" ProductCode="#x69055000" RevisionNo="#x00060004" InfoDataAddr="true" EnableWdDivider0400="true" EnableWdTime0420="true" TimeoutStateChange2="3000" TimeoutStateChange3="3000" TimeoutStateChange4="3000" TimeoutMailbox2="2000" CheckRevisionNoType="2" PortPhys="17" IdentificationAdo="308" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="i550 Cabinet V06.04.xx" Desc="Inverter i550 Cabinet" PortABoxInfo="#x00ffffff">
 						<SyncMan>001080002600010001000000800000018000001026010000</SyncMan>
 						<SyncMan>001180002200010002000000800000018000001122010000</SyncMan>
 						<SyncMan>001206006400010003000000000020000400001264010000</SyncMan>
@@ -224,7 +240,6 @@
 		</Io>
 	</Project>
 	<Mappings>
-		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
 		<OwnerA Name="TIPC^PLC^PLC Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Feedroll Drive(Inverter i550 Cabinet)">
 				<Link VarA="PlcTask Inputs^Drive_Communication.Feedroll_Drive_Running" VarB="TPDO (A) user config^NetWordOUT1" Size="1" OffsB="6"/>

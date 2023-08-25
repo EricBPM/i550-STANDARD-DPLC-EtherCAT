@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.2" baseProfile="tiny" id="Ebene_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="254px" height="254px"
+	 viewBox="0 0 254 254" xml:space="preserve">
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  width="254" height="254" x="-1.5" y="-58.5" bottomLeftOrigin="true"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<g>
+	<path fill="#969696" d="M254,127c0,70.15-56.85,127-127,127C56.85,254,0,197.15,0,127C0,56.878,56.85,0,127,0
+		C197.15,0,254,56.878,254,127z"/>
+	<path fill="#505050" d="M236.769,127c0,60.633-49.136,109.769-109.769,109.769c-60.633,0-109.769-49.136-109.769-109.769
+		C17.231,66.393,66.367,17.231,127,17.231C187.633,17.231,236.769,66.393,236.769,127z"/>
+	<path fill="#FFFFFF" d="M235.492,127c0,59.933-48.56,108.492-108.492,108.492c-59.89,0-108.493-48.56-108.493-108.492
+		S67.11,18.507,127,18.507C186.933,18.507,235.492,67.067,235.492,127z"/>
+	<path fill="#505050" d="M230.387,127c0,57.11-46.276,103.387-103.387,103.387C69.932,230.387,23.613,184.11,23.613,127
+		C23.613,69.889,69.932,23.613,127,23.613C184.11,23.613,230.387,69.889,230.387,127z"/>
+</g>
+</svg>

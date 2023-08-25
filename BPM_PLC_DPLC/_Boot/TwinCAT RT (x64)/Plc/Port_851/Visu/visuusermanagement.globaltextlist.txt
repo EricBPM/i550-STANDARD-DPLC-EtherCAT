@@ -1,0 +1,21 @@
+Id;Default
+49;               User name
+50;          User name
+6;%s
+2;*****
+40;Acknowledge password:
+35;Add or insert user
+13;Cancel
+46;Change password
+42;Deactivated:
+34;Delete user
+37;Full name
+39;Full name:
+26;Login
+45;New password:
+14;Ok
+44;Old password:
+5;Password:
+47;User group selection:
+43;User management
+38;User name:

@@ -17,7 +17,13 @@ IF GVL.Metric_Set_Bit THEN
 ELSE
 		Pellet_Length_Displayed := Pellet_Length_Imperial_Input;
 		Pellet_Length_Metric_Input := Pellet_Length_Imperial_Input * 25.4;
-END_IF]]></ST>
+END_IF
+
+
+
+
+
+]]></ST>
     </Implementation>
     <LineIds Name="Imperial_Metric_Switching">
       <LineId Id="26" Count="1" />
@@ -27,6 +33,11 @@ END_IF]]></ST>
       <LineId Id="9" Count="1" />
       <LineId Id="20" Count="0" />
       <LineId Id="5" Count="0" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="39" Count="1" />
+      <LineId Id="34" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

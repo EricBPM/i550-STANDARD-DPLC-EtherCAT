@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # TcXaeShell Solution File, Format Version 11.00
 VisualStudioVersion = 15.0.28307.1913
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FE7A1B72-C5B7-4D7C-BB7D-76384D4DE8E1}") = "BPM_HMI_800_480", "BPM_HMI_800_480\BPM_HMI_800_480.hmiproj", "{BA4FBD23-89E8-4F04-B7F3-891040CBB2EE}"
-EndProject
 Project("{B1E792BE-AA5F-4E3C-8C82-674BF9C0715B}") = "i550 Standard DPLC EtherCAT PLC", "BPM_PLC_DPLC\i550 Standard DPLC EtherCAT PLC.tsproj", "{3124E0AA-9BB0-4D73-B39B-C2A7FA057F7D}"
 EndProject
 Global
@@ -21,18 +19,6 @@ Global
 		Release|TwinCAT RT (x86) = Release|TwinCAT RT (x86)
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BA4FBD23-89E8-4F04-B7F3-891040CBB2EE}.Debug|TwinCAT CE7 (ARMV7).ActiveCfg = Debug|TwinCAT HMI
-		{BA4FBD23-89E8-4F04-B7F3-891040CBB2EE}.Debug|TwinCAT HMI.ActiveCfg = Debug|TwinCAT HMI
-		{BA4FBD23-89E8-4F04-B7F3-891040CBB2EE}.Debug|TwinCAT HMI.Build.0 = Debug|TwinCAT HMI
-		{BA4FBD23-89E8-4F04-B7F3-891040CBB2EE}.Debug|TwinCAT OS (ARMT2).ActiveCfg = Debug|TwinCAT HMI
-		{BA4FBD23-89E8-4F04-B7F3-891040CBB2EE}.Debug|TwinCAT RT (x64).ActiveCfg = Debug|TwinCAT HMI
-		{BA4FBD23-89E8-4F04-B7F3-891040CBB2EE}.Debug|TwinCAT RT (x86).ActiveCfg = Debug|TwinCAT HMI
-		{BA4FBD23-89E8-4F04-B7F3-891040CBB2EE}.Release|TwinCAT CE7 (ARMV7).ActiveCfg = Release|TwinCAT HMI
-		{BA4FBD23-89E8-4F04-B7F3-891040CBB2EE}.Release|TwinCAT HMI.ActiveCfg = Release|TwinCAT HMI
-		{BA4FBD23-89E8-4F04-B7F3-891040CBB2EE}.Release|TwinCAT HMI.Build.0 = Release|TwinCAT HMI
-		{BA4FBD23-89E8-4F04-B7F3-891040CBB2EE}.Release|TwinCAT OS (ARMT2).ActiveCfg = Release|TwinCAT HMI
-		{BA4FBD23-89E8-4F04-B7F3-891040CBB2EE}.Release|TwinCAT RT (x64).ActiveCfg = Release|TwinCAT HMI
-		{BA4FBD23-89E8-4F04-B7F3-891040CBB2EE}.Release|TwinCAT RT (x86).ActiveCfg = Release|TwinCAT HMI
 		{3124E0AA-9BB0-4D73-B39B-C2A7FA057F7D}.Debug|TwinCAT CE7 (ARMV7).ActiveCfg = Debug|TwinCAT CE7 (ARMV7)
 		{3124E0AA-9BB0-4D73-B39B-C2A7FA057F7D}.Debug|TwinCAT CE7 (ARMV7).Build.0 = Debug|TwinCAT CE7 (ARMV7)
 		{3124E0AA-9BB0-4D73-B39B-C2A7FA057F7D}.Debug|TwinCAT HMI.ActiveCfg = Debug|TwinCAT RT (x64)

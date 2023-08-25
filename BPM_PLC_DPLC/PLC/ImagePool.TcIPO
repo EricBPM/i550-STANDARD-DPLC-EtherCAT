@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <ImagePool Name="ImagePool" Id="{2d45c458-9173-485b-ac65-ddfac90a3d69}">
+    <XmlArchive>
+      <Data>
+        <o xml:space="preserve" t="ImagePoolObject">
+          <v n="UniqueIdGenerator">"30"</v>
+          <l n="BitmapPool" t="ArrayList" cet="ImagePoolItem">
+            <o>
+              <v n="BitmapID">"398x150 Logo (300DPI) - no background"</v>
+              <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|S:\Employee Folders\Eric M\Graphics for Programming\Logos\398x150 Logo (300DPI) - no background.png"</v>
+              <v n="ItemID">4</v>
+            </o>
+            <o>
+              <v n="BitmapID">"Feed Rate_burned_Resized"</v>
+              <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|C:\MyLenzePrograms\Standard_DPLC_CANOpen_Fixes\BayPlastic_LengthControl_DPLC_Analog_5Preset_HMI_Project\Screen Images\Feed Rate_burned_Resized.png"</v>
+              <v n="ItemID">5</v>
+            </o>
+            <o>
+              <v n="BitmapID">"Feedroll_Diameter_burned_122x166"</v>
+              <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|C:\MyLenzePrograms\Standard_DPLC_CANOpen_Fixes\BayPlastic_LengthControl_DPLC_Analog_5Preset_HMI_Project\Screen Images\Feedroll_Diameter_burned_122x166.png"</v>
+              <v n="ItemID">8</v>
+            </o>
+            <o>
+              <v n="BitmapID">"Motor_Pulleys_for_Feed_Roll_burned_188x474"</v>
+              <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|C:\MyLenzePrograms\Standard_DPLC_CANOpen_Fixes\BayPlastic_LengthControl_DPLC_Analog_5Preset_HMI_Project\Screen Images\Motor_Pulleys_for_Feed_Roll_burned_188x474.png"</v>
+              <v n="ItemID">9</v>
+            </o>
+            <o>
+              <v n="BitmapID">"Motor_Pulleys_for_Rotor_Drive_burned_188x474"</v>
+              <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|C:\MyLenzePrograms\Standard_DPLC_CANOpen_Fixes\BayPlastic_LengthControl_DPLC_Analog_5Preset_HMI_Project\Screen Images\Motor_Pulleys_for_Rotor_Drive_burned_188x474.png"</v>
+              <v n="ItemID">10</v>
+            </o>
+            <o>
+              <v n="BitmapID">"Number_of_Teeth_for_Rotor_burned_143x122"</v>
+              <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|C:\MyLenzePrograms\Standard_DPLC_CANOpen_Fixes\BayPlastic_LengthControl_DPLC_Analog_5Preset_HMI_Project\Screen Images\Number_of_Teeth_for_Rotor_burned_143x122.png"</v>
+              <v n="ItemID">11</v>
+            </o>
+            <o>
+              <v n="BitmapID">"Pellet Length_burned"</v>
+              <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|C:\MyLenzePrograms\Standard_DPLC_CANOpen_Fixes\BayPlastic_LengthControl_DPLC_Analog_5Preset_HMI_Project\Screen Images\Pellet Length_burned.png"</v>
+              <v n="ItemID">12</v>
+            </o>
+            <o>
+              <v n="BitmapID">"Rotor_burned"</v>
+              <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|C:\MyLenzePrograms\Standard_DPLC_CANOpen_Fixes\BayPlastic_LengthControl_DPLC_Analog_5Preset_HMI_Project\Screen Images\Rotor_burned.png"</v>
+              <v n="ItemID">13</v>
+            </o>
+            <o>
+              <v n="BitmapID">"Rotor_RPM_burned_1_50_1_75_Rotated"</v>
+              <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|C:\MyLenzePrograms\Standard_DPLC_CANOpen_Fixes\BayPlastic_LengthControl_DPLC_Analog_5Preset_HMI_Project\Screen Images\Rotor_RPM_burned_1_50_1_75_Rotated.png"</v>
+              <v n="ItemID">14</v>
+            </o>
+            <o>
+              <v n="BitmapID">"pelletIcon-transformed"</v>
+              <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|C:\Users\ericm\Pictures\Machine Graphics\pelletIcon-transformed.png"</v>
+              <v n="ItemID">6</v>
+            </o>
+            <o>
+              <v n="BitmapID">"caliper"</v>
+              <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|C:\Users\ericm\Pictures\Icon Library\caliper.png"</v>
+              <v n="ItemID">27</v>
+            </o>
+            <o>
+              <v n="BitmapID">""</v>
+              <v n="FileID">""</v>
+              <v n="ItemID">29</v>
+            </o>
+          </l>
+          <v n="GuidInit">{96a93bb5-cebe-4430-904c-5759c2c14294}</v>
+          <v n="GuidReInit">{8cef74c8-75dd-44e8-8109-dd25ff2ee21b}</v>
+          <v n="GuidExitX">{e099d221-bae2-4505-b075-65c01a355e4d}</v>
+          <v n="ValidIds">true</v>
+        </o>
+      </Data>
+      <TypeList>
+        <Type n="ArrayList">System.Collections.ArrayList</Type>
+        <Type n="Boolean">System.Boolean</Type>
+        <Type n="Guid">System.Guid</Type>
+        <Type n="ImagePoolItem">{215b2719-0347-4e4d-ba85-8bcd66946f66}</Type>
+        <Type n="ImagePoolObject">{bb0b9044-714e-4614-ad3e-33cbdf34d16b}</Type>
+        <Type n="Int32">System.Int32</Type>
+        <Type n="String">System.String</Type>
+      </TypeList>
+    </XmlArchive>
+  </ImagePool>
+</TcPlcObject>

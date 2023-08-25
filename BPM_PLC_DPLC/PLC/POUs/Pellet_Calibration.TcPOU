@@ -13,13 +13,17 @@ END_VAR
 
 
 IF SET_CALIBRATON_VALUE THEN
-	GVL.Pellet_Length_Calibration_Value := Pellet_Length_Temp_Cal_Val;
-END_IF]]></ST>
+	GVL.Pellet_Length_Calibration_Value := Pellet_Length_Temp_Cal_Val; //this line is run by the Visu when the button is pressed.
+END_IF
+
+]]></ST>
     </Implementation>
     <LineIds Name="Pellet_Calibration">
       <LineId Id="13" Count="2" />
       <LineId Id="5" Count="0" />
       <LineId Id="11" Count="1" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="22" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

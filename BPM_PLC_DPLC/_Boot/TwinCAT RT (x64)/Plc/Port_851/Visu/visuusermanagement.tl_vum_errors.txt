@@ -1,0 +1,33 @@
+Id;Default
+0;
+20480;User management file not found
+20481;User management temp file cannot be created
+20482;User management file cannot be read
+20483;User management file cannot be written
+20484;Invalid user management file content
+20485;Username already exist
+20486;The password is wrong
+20487;The password did not match
+20488;The content from the new user DB configuration cannot be stored
+20489;Only visible users can be removed
+20490;An empty password is not allowed
+20491;Only one client can edit user management entries
+20492;Error during working with SysFile
+20493;Set new user database failed
+20494;Proxy is not in idle mode - action cannot be executed
+20495;DataServer ProcessDataServerRequest error
+20496;The user list cannot be read from the remote system
+20497;The maximum number of possible groups is exceeded
+20498;The user does not exist
+20499;The user is inactive
+20500;The login dialog cannot be opened because the maximum number of login dialogs is reached
+20501;No client memory
+20502;No user logged in
+20503;No valid user group set
+20504;No right to change users
+20505;No user management
+20507;The password is wrong. Further attempts are limited.
+20508;The password is wrong. Only one more attempt is left.
+20509;The password is wrong. Your account will be locked for some time.
+20510;The password is wrong. Your account will be locked.
+;

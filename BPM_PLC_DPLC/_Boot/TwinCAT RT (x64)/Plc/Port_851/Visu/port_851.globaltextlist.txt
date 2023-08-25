@@ -1,0 +1,72 @@
+Id;Default
+548;%1.3f
+110;%1.3F
+99;%1.4f
+937;%1.4F
+640;%d
+190;%f
+605;%i
+556;%s
+3;0.08
+952;0.088
+997;0.100
+829;0.125
+500;0.2
+759;0.200
+928;Admin
+934;Calculated Data
+250;Calibrate Pellet Length
+455;Electrical Bill ID
+380;Feedroll Data
+838;Feedroll Diameter (Inch)
+98;Feedroll Drive Pulley
+346;Feedroll Driven Pulley
+345;Feedroll Motor Data
+241;Feedroll Motor Max Hz
+84;Feedroll Motor Rated Hz
+338;Feedroll Motor Rated RPM
+989;Feedroll Speed
+549;Ft/Min
+818;Hour Meter
+310;Hours
+753;Inch             mm
+420;Limits
+892;Login
+925;Machine Identity
+220;Maximum Pellet Length
+970;Maximum Rated Line Speed
+923;Maximum Rated Line Speed (Ft/min)
+263;Minimum Feedroll Hz
+541;Minimum Feedroll Motor Hz
+957;Minimum Pellet Length
+381;Minimum Rated Line Speed
+750;Minimum Rotor Motor Hz
+820;None
+538;Operator
+100;Pellet Length
+698;Pellet Length Calibration Factor
+471;Pellet Length Measured (Actual Length)
+815;Pellet Length Setting (current setting)
+347;Pellet Length Setting (Current Setting)
+983;Preset 1
+795;Preset 2
+126;Preset 3
+670;Preset 4
+800;Purchase Order #
+81;Rotor Data
+592;Rotor Drive Pulley
+173;Rotor Driven Pulley
+584;Rotor Motor Data
+294;Rotor Motor Max Hz
+29;Rotor Motor Rated Hz
+624;Rotor Motor Rated RPM
+597;Rotor Speed
+528;Rotor Tooth Count
+903;Rotor Torque Percent
+867;Rotor Torque Utilization %
+770;RPM
+105;Serial Number
+733;Service
+324;Work Order #
+850;Wr
+139;WRITE CALIBRATION CONSTANT
